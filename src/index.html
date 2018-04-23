@@ -19,8 +19,8 @@
   <meta name="application-name" content="<%= htmlWebpackPlugin.options.title %>">
   <meta name="msapplication-config" content="/browserconfig.xml">
 
-  <meta name="description" content="Portfolio of Tamino Martinius - Head of Development at shyftplan">
-  <meta name="keywords" content="Tamino, Martinius, Developer, Backend, Frontend, Head of Development, Lead Engineering">
+  <meta name="description" content="Luigi Pertoldi's personal website">
+  <meta name="keywords" content="Pertoldi, Physics, Developer, Ph.D.">
 
   <style>
     html, body {
@@ -53,6 +53,8 @@
       --color-zsh-text: #899;
       --color-zsh-path-background: #2E8CCF;
       --color-zsh-path-foreground: #000;
+      --color-zsh-os-background: #272822;
+      --color-zsh-os-foreground: #F8F8F2;
       --color-zsh-branch-background: #85981C;
       --color-zsh-branch-foreground: #000;
       --color-zsh-command-valid: #85981C;
@@ -82,6 +84,7 @@
       font-size: 1rem;
     }
 
+    .loader .path:before,
     .loader .branch:before,
     .loader .command:before {
       content: '';
@@ -98,10 +101,21 @@
       padding-right: 1rem;
     }
 
+    .loader .os {
+      background-color: var(--color-zsh-os-background);
+      color: var(--color-zsh-os-foreground);
+      padding-right: 0.3rem;
+      padding-left: 0.1rem;
+    }
+
     .loader .branch {
       background-color: var(--color-zsh-branch-background);
       color: var(--color-zsh-branch-foreground);
       padding-right: 1rem;
+    }
+
+    .loader .path:before {
+      border-left-color: var(--color-zsh-os-background);
     }
 
     .loader .branch:before {
@@ -172,7 +186,8 @@
       </span>
     </div>
     <div class="line">
-      <span class="path">~/taminomartinius.de</span>
+      <span class="os"> </span>
+      <span class="path">pd.infn.it/~pertoldi</span>
       <span class="branch"> master</span>
       <span class="command"></span>
       <span class="args"></span>
@@ -204,7 +219,7 @@
 
     window._gaq = []
     _gaq.push(['_setAccount', 'UA-29865051-1'])
-    _gaq.push(['_setDomainName', 'taminomartinius.de'])
+    _gaq.push(['_setDomainName', 'pd.infn.it/~pertoldi'])
     _gaq.push(['_trackPageview'])
   </script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"/>

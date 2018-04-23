@@ -61,5 +61,6 @@ typings/
 dist
 !dist/.keep
 
-# MacOS junk
+# junk
 .DS_Store
+*.swp

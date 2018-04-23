@@ -18,24 +18,19 @@ export const state = new State();
 * Header *
 *********/
 
-export const myName = 'Tamino Martinius';
-export const profession = 'I speak Code';
-export const street = 'Lehdenstr. 21';
-export const postalCode = '06847';
-export const city = 'Dessau';
+export const myName = 'Luigi Pertoldi';
+export const profession = 'Ph.D. Physics Student';
+export const street = 'via Marzolo 8';
+export const postalCode = '35121';
+export const city = 'Padova';
 export const emails: string[] = [
-  'hi@zaku.eu',
-  'hello@zaku.eu',
-  'im-not-a-recruiter@zaku.eu',
+  'luigi.pertoldi@pd.infn.it',
+  'pertoldi@pd.infn.it',
+  'luigi.pertoldi@hotmail.it',
 ];
 export const socialNetworks: { [key: string]: string } = {
-  github: 'https://github.com/tamino-martinius',
-  codepen: 'https://codepen.io/Zaku/',
-  dribbble: 'https://dribbble.com/TaminoMartinius',
-  twitter: 'https://twitter.com/TaminoMartinius',
-  linkedin: 'https://www.linkedin.com/in/tamino-martinius',
+  github: 'https://github.com/gipert'
 };
-
 
 /*********
 * Skills *
@@ -230,204 +225,16 @@ export const skills: SkillSet[] = [
 
 export const curriculumVitae: (Job | Education)[] = [
   {
-    company: 'shyftplan GmbH',
-    description: `
-      I lead shyftplans Front- and Backend Developers. I'm responsible to
-      design, manage and build the Infrastructure for thousands of concurrent
-      Users at Germanys best shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2017-07-01'),
-    endsAt: undefined,
-    remote: false,
-    position: [
-      'Head of Development',
-      'Lead Engineering',
+    institution: [
+      'Università degli Studi di Padova',
+      'INFN - Sezione di Padova'
     ],
-    skills: {
-      lambda,
-      beanstalk,
-      rds,
-      aurora,
-      nodejs,
-      mongodb,
-      android,
-      ios,
-      api,
-      rails,
-      psql,
-      redis,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
     description: `
-      I lead shyftplans Front- and Backend Developers. I'm responsible for
-      the Web and Mobile Infrastructure for Germanys best shift planning and
-      accounting Web Application.
+      Ph.D. in Physics.
     `,
-    startsAt: new Date('2016-12-01'),
-    endsAt: new Date('2017-06-30'),
-    remote: false,
-    position: [
-      'Head of Code',
-      'Head of Mobile',
-    ],
-    skills: {
-      lambda,
-      beanstalk,
-      rds,
-      nodejs,
-      mongodb,
-      android,
-      ios,
-      api,
-      rails,
-      psql,
-      redis,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
-    description: `
-      I plan and build the Mobile App and Infrastructure for Germanys best
-      shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2014-12-01'),
-    endsAt: new Date('2016-11-30'),
-    remote: false,
-    position: [
-      'Head of Mobile',
-      'Backend Developer',
-    ],
-    skills: {
-      nodejs,
-      mongodb,
-      android,
-      ios,
-      api,
-      rails,
-      psql,
-      redis,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
-    description: `
-      I plan and build the Infrastructure pre and post launch for Germanys best
-      shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2015-02-01'),
-    endsAt: new Date('2015-07-01'),
-    remote: false,
-    position: 'Backend Developer',
-    skills: {
-      rails,
-      psql,
-      redis,
-      elasticsearch,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
-    description: `
-      I remotely plan and build the Infrastructure pre and post launch for
-      Germanys best shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2014-12-01'),
-    endsAt: new Date('2015-01-31'),
-    remote: true,
-    position: 'Backend Developer',
-    skills: {
-      rails,
-      psql,
-      redis,
-      elasticsearch,
-    },
-  },
-
-  {
-    company: 'Nutanix',
-    description: `
-      I remotely worked as Frontend Developer on the Server Admin Interface of
-      Nutanix Cloud Infrastructure.
-    `,
-    startsAt: new Date('2014-11-01'),
-    endsAt: new Date('2015-01-31'),
-    remote: true,
-    position: 'Frontend Developer',
-    skills: {
-      nodejs,
-      less,
-      backbone,
-    },
-  },
-
-  {
-    company: 'Nutanix',
-    description: `
-      I remotely implemented a complete redesign of Nutanix website with
-      PHP and less.
-    `,
-    startsAt: new Date('2014-08-01'),
-    endsAt: new Date('2014-10-31'),
-    remote: true,
-    position: 'Frontend Developer',
-    skills: {
-      php,
-      js,
-      less,
-      svg,
-    },
-  },
-
-  {
-    company: 'Volkswagen AG',
-    description: `
-      I researched a live video processing solution at Volkswagens destruction
-      free analysis Team.
-    `,
-    startsAt: new Date('2014-02-01'),
-    endsAt: new Date('2015-01-31'),
-    remote: false,
-    position: 'Developer (Research - NDA)',
-    skills: {
-      nodejs,
-      mongodb,
-      imageProcessing,
-    },
-  },
-
-  {
-    company: 'Novotrend GmbH',
-    description: `
-      I designed and planned build the Infrastructure of the most common Web
-      Application to manage the process for pivate job adviser. I was also
-      involved in creating a CRM for customer Websites.
-    `,
-    startsAt: new Date('2010-04-01'),
-    endsAt: new Date('2013-12-31'),
-    remote: false,
-    position: 'Head of Code',
-    skills: {
-      asp,
-      nodejs,
-      mssql,
-    },
-  },
-
-  {
-    university: 'Philipps-Universität Marburg',
-    description: `
-      I studied IT with secondary subject Math. My focus was on Numeric,
-      Parralel Execution, Neural Networks and functional programming languages.
-    `,
-    startsAt: new Date('2004'),
-    endsAt: new Date('2015'),
-    graduiation: 'Intermediate diploma',
+    startsAt: new Date('2017'),
+    endsAt: new Date('2020'),
+    graduation: 'Ph.D.',
     skills: {
       numeric,
       logic,
@@ -439,27 +246,38 @@ export const curriculumVitae: (Job | Education)[] = [
   },
 
   {
-    company: 'Freelancer',
+    university: 'Università degli Studi di Padova',
     description: `
-      I created Websites for small and medium sized companies and worked
-      remotely for enterprise customers.
+      two-year master study plan in general Physics.
     `,
-    startsAt: new Date('2002'),
-    endsAt: undefined,
-    remote: true,
-    position: 'Full Stack Developer',
+    startsAt: new Date('2015'),
+    endsAt: new Date('2017'),
+    graduation: 'MAaster Degree',
     skills: {
-      nodejs,
-      rails,
-      react,
-      php,
-      mongodb,
-      psql,
-      mariadb,
-      stylus,
-      less,
-      sass,
-      svg,
+      numeric,
+      logic,
+      math,
+      parallelExec,
+      neuronalNetwork,
+      distributedSys,
+    },
+  },
+
+  {
+    university: 'Università degli Studi di Padova',
+    description: `
+      three-year bachelor study plan in general Physics.
+    `,
+    startsAt: new Date('2012'),
+    endsAt: new Date('2015'),
+    graduation: 'Bachelor Degree',
+    skills: {
+      numeric,
+      logic,
+      math,
+      parallelExec,
+      neuronalNetwork,
+      distributedSys,
     },
   },
 ];

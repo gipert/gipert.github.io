@@ -35,8 +35,9 @@ export interface Job extends Stage {
 };
 
 export interface Education extends Stage {
-  university: string,
-  graduiation: string,
+  institution?: string | string[],
+  university?: string,
+  graduation: string,
 };
 
 export interface ShowCase extends Stage {
