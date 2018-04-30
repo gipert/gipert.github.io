@@ -1,7 +1,7 @@
 <template>
   <Stage
     class="job"
-    :abbreviation="`${year} - ${data.company} - ${mainPosition}`"
+    :abbreviation="`${year} - ${firstInstitution} - ${mainPosition}`"
     :data="data"
     :isLast="isLast"
   >
@@ -84,6 +84,9 @@
         ;
         const remote = this.data.remote ? '(remote) ' : '';
         return remote + position;
+      },
+      firstInstitution() {
+        return this.data.institution[0];
       },
     },
   };

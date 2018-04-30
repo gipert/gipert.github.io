@@ -20,13 +20,10 @@ export const state = new State();
 
 export const myName = 'Luigi Pertoldi';
 export const profession = 'Ph.D. Physics Student';
-export const street = 'via Marzolo 8';
-export const postalCode = '35121';
-export const city = 'Padova';
+export const address = 'via Marzolo 8, 35121 Padova (Italy)';
 export const emails: string[] = [
-  'luigi.pertoldi@pd.infn.it',
   'pertoldi@pd.infn.it',
-  'luigi.pertoldi@hotmail.it',
+  'luigi.pertoldi@pd.infn.it',
 ];
 export const socialNetworks: { [key: string]: string } = {
   github: 'https://github.com/gipert'
@@ -226,8 +223,8 @@ export const skills: SkillSet[] = [
 export const curriculumVitae: (Job | Education)[] = [
   {
     institution: [
+      'INFN Sezione di Padova',
       'Università degli Studi di Padova',
-      'INFN - Sezione di Padova'
     ],
     description: `
       Ph.D. in Physics.
@@ -252,7 +249,7 @@ export const curriculumVitae: (Job | Education)[] = [
     `,
     startsAt: new Date('2015'),
     endsAt: new Date('2017'),
-    graduation: 'MAaster Degree',
+    graduation: 'Master Degree',
     skills: {
       numeric,
       logic,

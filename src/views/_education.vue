@@ -1,18 +1,50 @@
 <template>
   <Stage
     class="education"
-    :abbreviation="`${year} - ${data.university} - ${data.graduation}`"
+    :abbreviation="`${year} - ${place} - ${data.graduation}`"
     :data="data"
     :isLast="isLast"
   >
-    <CodeLine>
-      <Tab/><Tab/>
-      <VariableName name="university"/>
-      <span class="expression">:</span>
-      <span class="white-space space"></span>
-      <String :value="data.university"></String>
-      <span class="expression">,</span>
-    </CodeLine>
+    <template v-if="data.university">
+      <CodeLine>
+        <Tab/><Tab/>
+        <VariableName name="university"/>
+        <span class="expression">:</span>
+        <span class="white-space space"></span>
+        <String :value="data.university"></String>
+        <span class="expression">,</span>
+      </CodeLine>
+    </template>
+    <template v-if="data.institution">
+      <template v-if="Array.isArray(data.institution)">
+        <CodeLine>
+          <Tab/><Tab/>
+          <VariableName name="institution"/>
+          <span class="expression">:</span>
+          <span class="white-space space">:</span>
+          <span class="expression">[</span>
+        </CodeLine>
+        <CodeLine v-for="institution in data.institution" :key="institution">
+        <Tab/><Tab/><Tab/>
+        <String :value="institution"></String>
+        <span class="expression">,</span>
+        </CodeLine>
+        <CodeLine>
+          <Tab/><Tab/>
+          <span class="expression">],</span>
+        </CodeLine>
+      </template>
+      <template v-else>
+        <CodeLine>
+          <Tab/><Tab/>
+          <VariableName name="institution"/>
+          <span class="expression">:</span>
+          <span class="white-space space"></span>
+          <String :value="data.institution"></String>
+          <span class="expression">,</span>
+        </CodeLine>
+      </template>
+    </template>
     <CodeLine>
       <Tab/><Tab/>
       <VariableName name="graduation"/>
@@ -39,6 +71,17 @@
     computed: {
       year() {
         return this.data.startsAt.getFullYear();
+      },
+      place() {
+        if (this.data.institution) {
+          const inst = Array.isArray(this.data.institution)
+            ? this.data.institution[0]
+            : this.data.institution
+          ;
+          return inst;
+        } else {
+          return this.data.university;
+        }
       },
     },
     components: {

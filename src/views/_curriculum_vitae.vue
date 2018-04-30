@@ -21,7 +21,7 @@
     </CodeLine>
     <template v-for="(entry, index) in data">
       <component
-        :is="entry.company ? 'Job' : 'Education'"
+        :is="entry.graduation ? 'Education' : 'Job'"
         :key="`entry-${index}`"
         :data="entry"
         :isLast="index === data.length - 1"

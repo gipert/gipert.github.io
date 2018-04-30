@@ -29,7 +29,8 @@ export interface Stage {
 };
 
 export interface Job extends Stage {
-  company: string,
+  institution?: string | string[],
+  company?: string,
   remote: boolean,
   position: string | string[],
 };
