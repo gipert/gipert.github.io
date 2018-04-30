@@ -2,11 +2,11 @@ export enum Section {
   Profile,
   Skills,
   CurriculumVitae,
-  Experiments,
-  Projects,
-  Talks,
-  Packages,
-  Misc,
+        //  Experiments,
+        //  Projects,
+        //  Talks,
+        //  Packages,
+        //  Misc,
 };
 
 export enum Language {
@@ -25,6 +25,7 @@ export interface Stage {
   description?: string,
   startsAt: Date,
   endsAt?: Date,
+  urls?: string[],
   skills: { [key: string]: Skill },
 };
 

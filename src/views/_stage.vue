@@ -35,6 +35,24 @@
           <span class="expression">,</span>
         </CodeLine>
       </template>
+      <template v-if="data.urls">
+        <CodeLine>
+          <Tab/><Tab/>
+          <VariableName name="urls"/>
+          <span class="expression">:</span>
+          <span class="white-space space"></span>
+          <span class="expression">[</span>
+        </CodeLine>
+        <CodeLine v-for="url in data.urls" :key="url">
+          <Tab/><Tab/><Tab/>
+          <Url :value="url"></Url>
+          <span class="expression">,</span>
+        </CodeLine>
+        <CodeLine>
+          <Tab/><Tab/>
+          <span class="expression">],</span>
+        </CodeLine>
+      </template>
       <CodeLine>
         <Tab/><Tab/>
         <VariableName name="startsAt"/>
@@ -89,6 +107,7 @@
   import Date from './_date.vue';
   import Collapsed from './_collapsed.vue';
   import VariableName from './_variable_name.vue';
+  import Url from './_url.vue';
 
   export default {
     data() {
@@ -122,6 +141,7 @@
       Date,
       Collapsed,
       VariableName,
+      Url,
     },
   };
 </script>

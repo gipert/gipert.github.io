@@ -64,3 +64,4 @@ dist
 # junk
 .DS_Store
 *.swp
+.eslintrc.json

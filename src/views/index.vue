@@ -2,7 +2,6 @@
   <div id="view" class="hidden">
     <CodeLine/>
     <Profile :data="data"/>
-<!--
     <Section :section="Section.Skills"></Section>
     <CodeLine/>
     <template v-for="skillset in data.skills">
@@ -12,7 +11,6 @@
         :key="skillset.title"
       />
     </template>
--->
     <CodeLine/>
     <Section :section="Section.CurriculumVitae"></Section>
     <CodeLine/>
@@ -30,24 +28,22 @@
       name="projects"
       :data="data.projects"
     />
--->
     <ShowCaseSection
       :section="Section.Talks"
       name="talks"
       :data="data.talks"
     />
-<!--
     <ShowCaseSection
       :section="Section.Packages"
       name="packages"
       :data="data.packages"
     />
--->
     <ShowCaseSection
       :section="Section.Misc"
       name="misc"
       :data="data.misc"
     />
+-->
     <Legal/>
   </div>
 </template>
