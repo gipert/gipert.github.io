@@ -1,5 +1,5 @@
 {
-  "name": "www.pd.infn.it/~pertoldi",
+  "name": "www.pd.infn.it-pertoldi",
   "private": true,
   "scripts": {
     "watch": "scripts/watch.sh",
@@ -31,7 +31,7 @@
     "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
-    "npm": "^6.0.0",
+    "npm": "^6.1.0",
     "vue": "^2.5.13"
   }
 }

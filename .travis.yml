@@ -1,0 +1,11 @@
+language: node_js
+
+install:
+    - npm install
+
+cache:
+  directories:
+    - "node_modules"
+
+script:
+    - node_modules/.bin/webpack --progress --hide-modules
