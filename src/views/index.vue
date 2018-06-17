@@ -17,6 +17,21 @@
     <CurriculumVitae :data="data.curriculumVitae"/>
     <CodeLine/>
     <CodeLine/>
+    <ShowCaseSection
+      :section="Section.Talks"
+      name="talks"
+      :data="data.talks"
+    />
+    <ShowCaseSection
+      :section="Section.Music"
+      name="music"
+      :data="data.music"
+    />
+    <ShowCaseSection
+      :section="Section.Misc"
+      name="misc"
+      :data="data.misc"
+    />
 <!--
     <ShowCaseSection
       :section="Section.Experiments"
@@ -29,19 +44,9 @@
       :data="data.projects"
     />
     <ShowCaseSection
-      :section="Section.Talks"
-      name="talks"
-      :data="data.talks"
-    />
-    <ShowCaseSection
       :section="Section.Packages"
       name="packages"
       :data="data.packages"
-    />
-    <ShowCaseSection
-      :section="Section.Misc"
-      name="misc"
-      :data="data.misc"
     />
 -->
     <Legal/>

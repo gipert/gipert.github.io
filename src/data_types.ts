@@ -2,11 +2,12 @@ export enum Section {
   Profile,
   Skills,
   CurriculumVitae,
-        //  Experiments,
-        //  Projects,
-        //  Talks,
-        //  Packages,
-        //  Misc,
+  Talks,
+  Music,
+  Misc,
+//  Experiments,
+//  Projects,
+//  Packages,
 };
 
 export enum Language {
@@ -44,7 +45,6 @@ export interface Education extends Stage {
 
 export interface ShowCase extends Stage {
   name: string,
-  urls: string[],
   media: string[],
 };
 

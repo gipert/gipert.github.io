@@ -13,7 +13,7 @@
       <String :value="data.name"></String>
       <span class="expression">,</span>
     </CodeLine>
-    <CodeLine>
+<!--    <CodeLine>
       <Tab/><Tab/>
       <VariableName name="urls"/>
       <span class="expression">:</span>
@@ -29,7 +29,7 @@
       <Tab/><Tab/>
       <span class="expression">],</span>
     </CodeLine>
-    <!-- <CodeLine>
+    <CodeLine>
       <Tab/><Tab/>
       <VariableName name="media"/>
       <span class="expression">:</span>
