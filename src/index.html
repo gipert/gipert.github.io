@@ -84,7 +84,15 @@
       font-size: 1rem;
     }
 
-    .loader .path:before,
+    .loader .path:before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border: 0.3rem solid transparent;
+      vertical-align: -0.25rem;
+    }
+
     .loader .branch:before,
     .loader .command:before {
       content: '';
@@ -101,21 +109,10 @@
       padding-right: 1rem;
     }
 
-    .loader .os {
-      background-color: var(--color-zsh-os-background);
-      color: var(--color-zsh-os-foreground);
-      padding-right: 0.3rem;
-      padding-left: 0.1rem;
-    }
-
     .loader .branch {
       background-color: var(--color-zsh-branch-background);
       color: var(--color-zsh-branch-foreground);
       padding-right: 1rem;
-    }
-
-    .loader .path:before {
-      border-left-color: var(--color-zsh-os-background);
     }
 
     .loader .branch:before {
@@ -186,7 +183,6 @@
       </span>
     </div>
     <div class="line">
-      <span class="os"> </span>
       <span class="path">pd.infn.it/~pertoldi</span>
       <span class="branch"> master</span>
       <span class="command"></span>
