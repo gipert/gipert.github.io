@@ -269,6 +269,23 @@ export const misc: ShowCase[] = [
         singularity,
     },
   },
+  {
+    name: 'Paul Tol\'s color palettes for ROOT',
+    description: `
+      Implementation of Paul Tol's color palettes for the ROOT CERN
+      software suite. To be included in a ROOT macro.
+    `,
+    startsAt: new Date('2018'),
+    endsAt: new Date('2018'),
+    urls: [
+      'https://gist.github.com/gipert/df72b67c1d02bbb41f1dd406b6397811',
+      'https://personal.sron.nl/~pault/data/colourschemes.pdf',
+    ],
+    media: [],
+    skills: {
+        root,
+    },
+  },
 ];
 
 /**************
