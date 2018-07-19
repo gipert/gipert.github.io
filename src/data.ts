@@ -171,6 +171,23 @@ export const curriculumVitae: (Job | Education)[] = [
 
 export const talks: ShowCase[] = [
   {
+    name: 'The Bayesian Blocks algorithm from time series analysis to histogram representation',
+    description: `
+      An overview of the Bayesian Blocks as a non-parametric representation of
+      data proposed by J. D. Scargle in 1998 for time series analysis in
+      Astrophysics. I apply the method to represent GERDA's energy spectrum and
+      describe its main features.
+    `,
+    startsAt: new Date('2018'),
+    endsAt: new Date('2018'),
+    urls: [
+      'https://www.dropbox.com/s/j8svzvwcd2lnrkt/bayesian-blocks.pdf?dl=0',
+    ],
+    media: [],
+    skills: {
+    },
+  },
+  {
     name: 'Tools and methodologies for GERDA Phase II background modeling',
     description: `
       A poster I presented at the International Neutrino Summer School 2018
@@ -204,7 +221,7 @@ export const talks: ShowCase[] = [
   {
     name: 'Ricerca di violazione delle simmetrie di Lorentz e CPT nel 2νββ con GERDA',
     description: `
-      A short talk about the results of my master thesis projecte presented at Società
+      A short talk about the results of my master thesis project presented at Società
       Italiana di Fisica (SIF) 103rd national congress.
     `,
     startsAt: new Date('2017'),
