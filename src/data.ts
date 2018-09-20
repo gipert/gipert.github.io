@@ -171,6 +171,22 @@ export const curriculumVitae: (Job | Education)[] = [
 
 export const talks: ShowCase[] = [
   {
+    name: 'Il modello di fondo di GERDA Fase II',
+    description: `
+      A short talk about the preliminary results of the GERDA Phase II
+      background model presented at Società Italiana di Fisica (SIF) 104th
+      national congress.
+    `,
+    startsAt: new Date('2018'),
+    endsAt: new Date('2018'),
+    urls: [
+      'https://www.dropbox.com/home/talks/SIF2018.pdf',
+    ],
+    media: [],
+    skills: {
+    },
+  },
+  {
     name: 'The Bayesian Blocks algorithm from time series analysis to histogram representation',
     description: `
       An overview of the Bayesian Blocks as a non-parametric representation of
