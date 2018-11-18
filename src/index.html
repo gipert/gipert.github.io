@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129302942-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129302942-2');
+  </script>
+
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <title><%= htmlWebpackPlugin.options.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
@@ -205,19 +215,6 @@
     }
   </script>
   <div id="view" class="hidden"></div>
-  <script>
-    (function (t, a, m, i, n, o, _) {
-      t['GoogleAnalyticsObject'] = n; t[n] = t[n] || function () {
-        (t[n].q = t[n].q || []).push(arguments)
-      }, t[n].l = 1 * new Date(); o = a.createElement(m),
-        _ = a.getElementsByTagName(m)[0]; o.async = 1; o.src = i; _.parentNode.insertBefore(o, _)
-    })(window, document, 'script', 'https://ssl.google-analytics.com/ga.js', 'ga');
-
-    window._gaq = []
-    _gaq.push(['_setAccount', 'UA-29865051-1'])
-    _gaq.push(['_setDomainName', 'pd.infn.it/~pertoldi'])
-    _gaq.push(['_trackPageview'])
-  </script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"/>
 </body>
 </html>
