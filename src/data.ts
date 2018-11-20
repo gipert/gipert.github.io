@@ -58,6 +58,7 @@ export const homebrew: Skill = { level: 0.9, name: 'Homebrew package manager' };
 
 // Frontend / Music
 export const finale: Skill = { level: 0.9, name: 'Finale music notation software' };
+export const lilypond: Skill = { level: 0.1, name: 'LilyPond music notation software' };
 
 export const skills: SkillSet[] = [
   {
@@ -187,7 +188,7 @@ export const talks: ShowCase[] = [
     },
   },
   {
-    name: 'The Bayesian Blocks algorithm from time series analysis to histogram representation',
+    name: 'The Bayesian Blocks algorithm',
     description: `
       An overview of the Bayesian Blocks as a non-parametric representation of
       data proposed by J. D. Scargle in 1998 for time series analysis in
@@ -262,17 +263,18 @@ export const music: ShowCase[] = [
     description: `
       Small website I created during the university years (when I had actually
       enough free time) to publish some sheet music (not so much sadly) I
-      transcribed over the years. Warning: it's in italian!
+      transcribed over the years.
     `,
     startsAt: new Date('2014'),
-    endsAt: new Date('2015'),
+    endsAt: new Date('20??'),
     urls: [
-      'http://lptranscriptions.altervista.org',
+      'https://gipert.github.io/sheet-music',
       'https://gumroad.com/luigipertoldi',
     ],
     media: [],
     skills: {
       finale,
+      lilypond,
     },
   },
 ];
@@ -391,3 +393,5 @@ export const packages: ShowCase[] = [
   },
 ];
  */
+
+// vim: tabstop=2 shiftwidth=2 expandtab
