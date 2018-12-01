@@ -74,7 +74,7 @@ new Vue({
 });
 
 console.log(
-  '%c~/taminomartinius.de %c%c  master %c cat %cREADME.md\n\n%c# www.taminomartinius.de\n\nCheck out the source on [GitHub](https://github.com/tamino-martinius/www.taminomartinius.de)',
+  '%cpd.infn.it/~pertoldi %c%c  master %c cat %cREADME.md\n\n%c# www.pd.infn.it/~pertoldi\n\nCheck out the source on [GitHub](https://github.com/gipert/www.pd.infn.it-pertoldi)',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #2E8CCF; color: #000000;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #2E8CCF;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #000000;',

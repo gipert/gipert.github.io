@@ -26,7 +26,9 @@ export const emails: string[] = [
   'luigi.pertoldi@pd.infn.it',
 ];
 export const socialNetworks: { [key: string]: string } = {
-  github: 'https://github.com/gipert'
+  github: 'https://github.com/gipert',
+  orcid: 'https://orcid.org/0000-0002-0467-2571',
+  inspire_hep: 'https://inspirehep.net/author/profile/L.Pertoldi.1'
 };
 
 /*********
@@ -47,14 +49,16 @@ export const git: Skill = { level: 0.8, name: 'Git' };
 
 // Frontend
 // Frontend / HEP
-export const root: Skill = { level: 0.8, name: 'ROOT Cern' };
+export const root: Skill = { level: 0.8, name: 'ROOT CERN' };
+export const geant4: Skill = { level: 0.5, name: 'Geant4 Simulation Toolkit' };
 export const tminuit: Skill = { level: 0.8, name: 'MINUIT' };
 
 // Frontend / Statistics
 export const bat: Skill = { level: 0.9, name: 'Bayesian Analysis Toolkit' };
 
-// Frontend / Software management
+// Frontend / Misc
 export const homebrew: Skill = { level: 0.9, name: 'Homebrew package manager' };
+export const unix_clt: Skill = { level: 0.9, name: 'Unix command line tools' };
 
 // Frontend / Music
 export const finale: Skill = { level: 0.9, name: 'Finale music notation software' };
@@ -79,15 +83,15 @@ export const skills: SkillSet[] = [
     data: [
       {
         title: 'HEP',
-        data: { root, tminuit },
+        data: { root, geant4, tminuit },
       },
       {
         title: 'Statistics',
         data: { bat },
       },
       {
-        title: 'Software management',
-        data: { homebrew },
+        title: 'Misc',
+        data: { homebrew, unix_clt },
       },
     ],
   },
@@ -121,6 +125,7 @@ export const curriculumVitae: (Job | Education)[] = [
         docker,
         singularity,
         julia,
+        geant4,
     },
   },
 
@@ -319,6 +324,22 @@ export const misc: ShowCase[] = [
     media: [],
     skills: {
         root,
+    },
+  },
+  {
+    name: 'My dotfiles',
+    description: `
+      I love ricing my Linux distro (currently a CentOS7), check out my
+      dotfiles on GitHub!
+    `,
+    startsAt: new Date('2017'),
+    endsAt: new Date('20??'),
+    urls: [
+      'https://github.com/gipert/.dotfiles',
+    ],
+    media: [],
+    skills: {
+      unix_clt,
     },
   },
 ];
