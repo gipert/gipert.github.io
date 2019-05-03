@@ -177,6 +177,23 @@ export const curriculumVitae: (Job | Education)[] = [
 
 export const talks: ShowCase[] = [
   {
+    name: 'Searching 0νββ with GERDA Phase II',
+    description: `
+      My talk on the latest data release (presented at the Neutrino 2018
+      conference in Heidelberg) of GERDA Phase II held at the 'Revealing the
+      history of the universe with underground particle and nuclear research
+      2019' conference in Sendai, Japan.
+    `,
+    startsAt: new Date('2019'),
+    endsAt: new Date('2019'),
+    urls: [
+      'http://www.lowbg.org/ugnd/workshop/sympo_all/201903_Sendai/slides/7pm/7pm_5.pdf',
+    ],
+    media: [],
+    skills: {
+    },
+  },
+  {
     name: 'Il modello di fondo di GERDA Fase II',
     description: `
       A short talk about the preliminary results of the GERDA Phase II
