@@ -1,7 +1,7 @@
 <template>
   <Stage
     class="education"
-    :abbreviation="`${year} - ${place} - ${data.graduation}`"
+    :abbreviation="`${startYear}-${endYear} - ${place} - ${data.graduation}`"
     :data="data"
     :isLast="isLast"
   >
@@ -69,7 +69,7 @@
       'isLast',
     ],
     computed: {
-      year() {
+      startYear() {
         return this.data.startsAt.getFullYear();
       },
       place() {
@@ -82,6 +82,9 @@
         } else {
           return this.data.university;
         }
+      },
+      endYear() {
+        return this.data.endsAt ? this.data.endsAt.getFullYear() : ' now';
       },
     },
     components: {

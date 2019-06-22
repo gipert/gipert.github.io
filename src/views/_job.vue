@@ -1,7 +1,7 @@
 <template>
   <Stage
     class="job"
-    :abbreviation="`${year} - ${firstInstitution} - ${mainPosition}`"
+    :abbreviation="`${startYear}-${endYear} - ${firstInstitution} - ${mainPosition}`"
     :data="data"
     :isLast="isLast"
   >
@@ -74,8 +74,11 @@
       VariableName,
     },
     computed: {
-      year() {
+      startYear() {
         return this.data.startsAt.getFullYear();
+      },
+      endYear() {
+        return this.data.endsAt ? this.data.endsAt.getFullYear() : ' now';
       },
       mainPosition() {
         const position = Array.isArray(this.data.position)
