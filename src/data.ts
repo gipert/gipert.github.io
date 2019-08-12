@@ -39,7 +39,7 @@ export const socialNetworks: { [key: string]: string } = {
 // Backend / Code
 export const cpp: Skill = { level: 0.8, name: 'C++' };
 export const python: Skill = { level: 0.5, name: 'Python' };
-export const julia: Skill = { level: 0.3, name: 'Julia' };
+export const julia: Skill = { level: 0.7, name: 'Julia' };
 export const latex: Skill = { level: 0.8, name: 'LaTeX' };
 
 // Backend / Deploy
