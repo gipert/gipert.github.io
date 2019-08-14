@@ -203,7 +203,7 @@ export const talks: ShowCase[] = [
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
     urls: [
-      'https://www.dropbox.com/home/talks/SIF2018.pdf',
+      'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/SIF2018.pdf',
     ],
     media: [],
     skills: {
@@ -220,7 +220,7 @@ export const talks: ShowCase[] = [
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
     urls: [
-      'https://www.dropbox.com/s/j8svzvwcd2lnrkt/bayesian-blocks.pdf?dl=0',
+      'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/bayesian-blocks.pdf',
     ],
     media: [],
     skills: {
@@ -236,7 +236,7 @@ export const talks: ShowCase[] = [
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
     urls: [
-      'https://www.dropbox.com/s/cffpjcpt84dogex/INSS2018-poster.pdf?dl=0',
+      'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/INSS2018-poster.pdf',
     ],
     media: [],
     skills: {
