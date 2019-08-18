@@ -15,7 +15,7 @@
       <String :value="data.address"></String>
     </Variable>
     <CodeLine/>
-    <Variable v-for="(url, name) in data.socialNetworks" :key="name" :name="name">
+    <Variable v-for="(url, name) in data.socialNetworks" :key="url" :name="name">
       <Url :value="url"></Url>
     </Variable>
     <CodeLine/>
