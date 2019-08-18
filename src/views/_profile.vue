@@ -2,8 +2,8 @@
   <div class="profile">
     <Section :section="Section.Profile"></Section>
     <CodeLine/>
-    <Variable name="myName">
-      <String :value="data.myName"></String>
+    <Variable name="my_name">
+      <String :value="data.my_name"></String>
     </Variable>
     <Variable name="profession">
       <String :value="data.profession"></String>
@@ -17,6 +17,10 @@
     <CodeLine/>
     <Variable v-for="(url, name) in data.socialNetworks" :key="name" :name="name">
       <Url :value="url"></Url>
+    </Variable>
+    <CodeLine/>
+    <Variable name="sailing_cv">
+      <Url :value="data.sailing_cv"></Url>
     </Variable>
     <CodeLine/>
     <CodeLine/>

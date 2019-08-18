@@ -18,7 +18,7 @@ export const state = new State();
 * Header *
 *********/
 
-export const myName = 'Luigi Pertoldi';
+export const my_name = 'Luigi Pertoldi';
 export const profession = 'Ph.D. Physics Student';
 export const address = 'via Marzolo 8, 35121 Padova (Italy)';
 export const emails: string[] = [
@@ -30,6 +30,7 @@ export const socialNetworks: { [key: string]: string } = {
   orcid: 'https://orcid.org/0000-0002-0467-2571',
   inspire_hep: 'https://inspirehep.net/author/profile/L.Pertoldi.1'
 };
+export const sailing_cv = 'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/sailing-cv.pdf';
 
 /*********
 * Skills *
