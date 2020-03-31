@@ -19,6 +19,9 @@
       <Url :value="url"></Url>
     </Variable>
     <CodeLine/>
+    <Variable name="academic_cv">
+      <Url :value="data.academic_cv"></Url>
+    </Variable>
     <Variable name="sailing_cv">
       <Url :value="data.sailing_cv"></Url>
     </Variable>

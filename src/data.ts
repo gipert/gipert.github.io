@@ -28,8 +28,9 @@ export const emails: string[] = [
 export const socialNetworks: { [key: string]: string } = {
   github: 'https://github.com/gipert',
   orcid: 'https://orcid.org/0000-0002-0467-2571',
-  inspire_hep: 'https://inspirehep.net/author/profile/L.Pertoldi.1'
+  inspire_hep: 'https://inspirehep.net/authors/1667599'
 };
+export const academic_cv = 'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/academic-cv.pdf';
 export const sailing_cv = 'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/sailing-cv.pdf';
 
 /*********
