@@ -28,9 +28,9 @@
       :data="data.music"
     />
     <ShowCaseSection
-      :section="Section.Misc"
-      name="misc"
-      :data="data.misc"
+      :section="Section.Projects"
+      name="projects"
+      :data="data.projects"
     />
 <!--
     <ShowCaseSection

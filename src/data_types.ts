@@ -4,10 +4,10 @@ export enum Section {
   CurriculumVitae,
   Talks,
   Music,
-  Misc,
-//  Experiments,
-//  Projects,
-//  Packages,
+  Projects,
+  // Misc,
+  // Experiments,
+  // Packages,
 };
 
 export enum Language {

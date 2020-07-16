@@ -42,7 +42,9 @@ export const sailing_cv = 'https://gipert-storage.s3.eu-central-1.amazonaws.com/
 export const cpp: Skill = { level: 0.8, name: 'C++' };
 export const python: Skill = { level: 0.5, name: 'Python' };
 export const julia: Skill = { level: 0.7, name: 'Julia' };
-export const latex: Skill = { level: 0.8, name: 'LaTeX' };
+export const latex: Skill = { level: 0.8, name: 'LaTeX typesetting system' };
+export const asymptote: Skill = { level: 0.6, name: 'Asymptote vector graphics language' };
+export const bash: Skill = { level: 0.8, name: 'Bourne Again Shell scripting language' };
 
 // Backend / Deploy
 export const docker: Skill = { level: 0.9, name: 'Docker containers' };
@@ -59,7 +61,6 @@ export const tminuit: Skill = { level: 0.8, name: 'MINUIT' };
 export const bat: Skill = { level: 0.9, name: 'Bayesian Analysis Toolkit' };
 
 // Frontend / Misc
-export const homebrew: Skill = { level: 0.9, name: 'Homebrew package manager' };
 export const unix_clt: Skill = { level: 0.9, name: 'Unix command line tools' };
 
 // Frontend / Music
@@ -72,7 +73,7 @@ export const skills: SkillSet[] = [
     data: [
       {
         title: 'Code',
-        data: { cpp, python, julia, latex },
+        data: { cpp, python, julia, latex, bash, asymptote },
       },
       {
         title: 'Deploy',
@@ -92,8 +93,12 @@ export const skills: SkillSet[] = [
         data: { bat },
       },
       {
+        title: 'Music',
+        data: { finale, lilypond },
+      },
+      {
         title: 'Misc',
-        data: { homebrew, unix_clt },
+        data: { unix_clt },
       },
     ],
   },
@@ -305,11 +310,98 @@ export const music: ShowCase[] = [
 
 
 
-/*******
-* Misc *
-********/
+/***********
+* Projects *
+************/
 
-export const misc: ShowCase[] = [
+export const projects: ShowCase[] = [
+  {
+    name: 'Bayesian blocks algorithm C++ and Julia implementation',
+    description: `
+      Julia and C++ Implementations of the bayesian blocks algorithm,
+      originally designed by J. D. Scargle.
+    `,
+    startsAt: new Date('2019'),
+    endsAt: new Date('2019'),
+    urls: [
+      'https://github.com/gipert/bayesian-blocks',
+      'https://doi.org/10.1088/0004-637X/764/2/167',
+      'https://arxiv.org/abs/1708.00810',
+    ],
+    media: [],
+    skills: {
+        cpp,
+        julia,
+    },
+  },
+  {
+    name: 'Bayesian histogram fitter',
+    description: `
+      A fully JSON-configurable bayesian fitting engine (based on BAT and ROOT)
+      for data in the form of ROOT histograms. Taylored on GERDA data and
+      Probability Density Functions.
+    `,
+    startsAt: new Date('2019'),
+    endsAt: new Date('2020'),
+    urls: [
+      'https://github.com/gipert/gerda-fitter',
+    ],
+    media: [],
+    skills: {
+        cpp,
+        bat,
+        root,
+    },
+  },
+  {
+    name: 'Poisson bands algorithm implementation',
+    description: `
+      Header-only poisson smallest interval computing and drawing utilities.
+    `,
+    startsAt: new Date('2019'),
+    endsAt: new Date('2019'),
+    urls: [
+      'https://gist.github.com/gipert/194f8fb16cbc41dee7586ab04483b659',
+      'https://doi.org/10.1140/epjp/i2012-12024-0',
+    ],
+    media: [],
+    skills: {
+        cpp,
+        root,
+    },
+  },
+  {
+    name: 'C++ progress bar',
+    description: `
+      A very simple, header-only, fully customizable, progress bar (with
+      percentage) for C++ loops.
+    `,
+    startsAt: new Date('2016'),
+    endsAt: new Date('2020'),
+    urls: [
+      'https://github.com/gipert/progressbar',
+    ],
+    media: [],
+    skills: {
+        cpp,
+    },
+  },
+  {
+    name: 'Germanium detectors drawing library',
+    description: `
+      Beautiful HPGe detector technical drawing library written in the
+      gorgeous Asymptote vector graphics language.
+    `,
+    startsAt: new Date('2019'),
+    endsAt: new Date('2020'),
+    urls: [
+      'https://github.com/gipert/gedet-plots',
+    ],
+    media: [],
+    skills: {
+        asymptote,
+    },
+  },
   {
     name: 'My Docker and Singularity images',
     description: `
@@ -318,14 +410,33 @@ export const misc: ShowCase[] = [
     startsAt: new Date('2017'),
     endsAt: new Date('20??'),
     urls: [
-      'https://github.com/gipert/my-containers',
+      'https://github.com/gipert/Dockerfiles',
+      'https://github.com/gipert/Singularity.def',
       'https://hub.docker.com/u/gipert/',
-      'https://singularity-hub.org/collections/478',
+      'https://cloud.sylabs.io/library/gipert',
     ],
     media: [],
     skills: {
         docker,
         singularity,
+    },
+  },
+  {
+    name: 'Singularity virtual environments manager',
+    description: `
+      A simple and customizable application written in Bash to manage a
+      container depot. Allows executing commands, opening shells inside a
+      registered container from any location. Concept stolen from
+      oschulz/singularity-venv.
+    `,
+    startsAt: new Date('2020'),
+    endsAt: new Date('2020'),
+    urls: [
+      'https://github.com/gipert/singularity-venv',
+    ],
+    media: [],
+    skills: {
+        bash,
     },
   },
   {
@@ -346,10 +457,9 @@ export const misc: ShowCase[] = [
     },
   },
   {
-    name: 'My dotfiles',
+    name: 'My Linux dotfiles',
     description: `
-      I love ricing my Linux distro (currently a CentOS7), check out my
-      dotfiles on GitHub!
+      I love ricing my Arch Linux distribution, check out my dotfiles!
     `,
     startsAt: new Date('2017'),
     endsAt: new Date('20??'),
@@ -363,75 +473,5 @@ export const misc: ShowCase[] = [
   },
 ];
 
-/**************
-* Experiments *
-**************/
-/*
-export const experiments: ShowCase[] = [
-    {
-    name: 'Button Animations',
-    description: `
-      I created a couple of different Buttons which are planned to be the main
-      call to action buttons on a website. All buttons are previewed on dribbble
-      and the code is available Open Source at CodePen.
-    `,
-    startsAt: new Date('2014-08-05'),
-    endsAt: new Date('2017-07-02'),
-    urls: [
-      'https://dribbble.com/shots/3545734-Liquid-button-v2',
-      'https://dribbble.com/shots/2629106-Button-Group',
-      'https://dribbble.com/shots/1673204-Submit-Button',
-    ],
-    media: [],
-    skills: {
-    },
-  },
-];
- */
-
-/***********
-* Projects *
-***********/
-/*
-export const projects: ShowCase[] = [
-  {
-    name: 'Squoint',
-    description: `
-      Squoint is a puzzle game which is optimized for mobile devices and touch
-      gestures. The game is currently in closed beta and will be launched soon.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: undefined,
-    urls: [],
-    media: [],
-    skills: {
-    },
-  },
-];
- */
-
-/***********
-* Packages *
-***********/
-/*
-export const packages: ShowCase[] = [
-  {
-    name: 'Lets talk about ... Template',
-    description: `
-      A template with example slides. Thats my base branch with which i create
-      my slides for presentations.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: undefined,
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--template',
-      'https://github.com/tamino-martinius/lets-talk-about--example',
-    ],
-    media: [],
-    skills: {
-    },
-  },
-];
- */
 
 // vim: tabstop=2 shiftwidth=2 expandtab
