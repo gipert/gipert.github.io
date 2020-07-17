@@ -30,8 +30,8 @@ export const socialNetworks: { [key: string]: string } = {
   orcid: 'https://orcid.org/0000-0002-0467-2571',
   inspire_hep: 'https://inspirehep.net/authors/1667599'
 };
-export const academic_cv = 'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/academic-cv.pdf';
-export const sailing_cv = 'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/sailing-cv.pdf';
+export const academic_cv = 'https://gipert.github.io/files/academic-cv.pdf';
+export const sailing_cv = 'https://gipert.github.io/files/sailing-cv.pdf';
 
 /*********
 * Skills *
@@ -116,13 +116,17 @@ export const curriculumVitae: (Job | Education)[] = [
       'Università degli Studi di Padova',
     ],
     description: `
-      I'm working for the GERDA collaboration on the background model of
-      the experiment, in particular producing the Monte Carlo simulations
-      and the Probability Density Distribution to describe the data.
+      I am mainly working on the background model and liquid argon veto model of
+      the GERDA experiment. I am one of the "simulations and background study
+      task group" leaders.
     `,
     urls: [
-      'https://github.com/gipert/gerdasw-containers',
+      'https://github.com/gipert/gerda-fitter',
+      'https://github.com/gipert/gerda-factory',
+      'https://github.com/gipert/gerda-larmap',
       'https://github.com/gipert/0nbb-sensitivity',
+      'https://github.com/gipert/gerda-pcalib-sim',
+      'https://github.com/gipert/gedet-plots',
     ],
     startsAt: new Date('2017'),
     endsAt: new Date('2020'),
@@ -144,6 +148,7 @@ export const curriculumVitae: (Job | Education)[] = [
       violation in double-beta decay using data from the GERDA experiment'
     `,
     urls: [
+        'http://tesi.cab.unipd.it/56428/1/Tesi_LM_Pertoldi_Luigi.pdf',
         'https://github.com/gipert/master-thesis',
         'https://github.com/gipert/laboratorio-muoni-cosmici',
         'https://github.com/gipert/PSD-tools',
@@ -164,6 +169,7 @@ export const curriculumVitae: (Job | Education)[] = [
       the 'Sensitivity to the neutrino mass hierarchy with the JUNO experiment'
     `,
     urls: [
+        'http://tesi.cab.unipd.it/50124/1/Pertoldi_Luigi.pdf',
         'https://github.com/gipert/bachelor-thesis',
         'https://github.com/gipert/progressbar',
     ],
@@ -184,9 +190,26 @@ export const curriculumVitae: (Job | Education)[] = [
 
 export const talks: ShowCase[] = [
   {
+    name: 'Modeling of GERDA Phase II data',
+    description: `
+      A poster presented at the Neutrino2020 conference toghether with K. v.
+      Sturm about the GERDA background model. We presented the background
+      decomposition of single- and two-detector data in GERDA Phase II.
+    `,
+    startsAt: new Date('2020'),
+    endsAt: new Date('2020'),
+    urls: [
+      'https://indico.fnal.gov/event/19348/contributions/186251',
+      'https://doi.org/10.1007/JHEP03(2020)139',
+    ],
+    media: [],
+    skills: {
+    },
+  },
+  {
     name: 'Searching 0νββ with GERDA Phase II',
     description: `
-      My talk on the latest data release (presented at the Neutrino 2018
+      A talk on the latest data release (presented at the Neutrino 2018
       conference in Heidelberg) of GERDA Phase II held at the 'Revealing the
       history of the universe with underground particle and nuclear research
       2019' conference in Sendai, Japan.
@@ -210,7 +233,7 @@ export const talks: ShowCase[] = [
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
     urls: [
-      'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/SIF2018.pdf',
+      'https://gipert.github.io/files/SIF2018.pdf',
     ],
     media: [],
     skills: {
@@ -221,13 +244,14 @@ export const talks: ShowCase[] = [
     description: `
       An overview of the Bayesian Blocks as a non-parametric representation of
       data proposed by J. D. Scargle in 1998 for time series analysis in
-      Astrophysics. I apply the method to represent GERDA's energy spectrum and
-      describe its main features.
+      Astrophysics. I implement the method in C++ and Julia and apply it to the
+      energy spectrum of the GERDA experiment.
     `,
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
     urls: [
-      'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/bayesian-blocks.pdf',
+      'https://gipert.github.io/files/bayesian-blocks.pdf',
+      'https://github.com/gipert/bayesian-blocks',
     ],
     media: [],
     skills: {
@@ -238,12 +262,12 @@ export const talks: ShowCase[] = [
     description: `
       A poster I presented at the International Neutrino Summer School 2018
       about the revised background model we adopted for the second phase of
-      the experiments. Some preliminary results are also discussed.
+      the experiment. Some preliminary results are also discussed.
     `,
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
     urls: [
-      'https://gipert-storage.s3.eu-central-1.amazonaws.com/public/INSS2018-poster.pdf',
+      'https://gipert.github.io/files/INSS2018-poster.pdf',
     ],
     media: [],
     skills: {
@@ -291,7 +315,7 @@ export const music: ShowCase[] = [
     name: 'LP Transcriptions',
     description: `
       Small website I created during the university years (when I had actually
-      enough free time) to publish some sheet music (not so much sadly) I
+      enough free time) to share the sheet music (not so much sadly) I
       transcribed over the years.
     `,
     startsAt: new Date('2014'),
@@ -319,7 +343,7 @@ export const projects: ShowCase[] = [
     name: 'Bayesian blocks algorithm C++ and Julia implementation',
     description: `
       Julia and C++ Implementations of the bayesian blocks algorithm,
-      originally designed by J. D. Scargle.
+      originally designed by J. D. Scargle in 1998.
     `,
     startsAt: new Date('2019'),
     endsAt: new Date('2019'),

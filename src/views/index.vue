@@ -23,14 +23,14 @@
       :data="data.talks"
     />
     <ShowCaseSection
-      :section="Section.Music"
-      name="music"
-      :data="data.music"
-    />
-    <ShowCaseSection
       :section="Section.Projects"
       name="projects"
       :data="data.projects"
+    />
+    <ShowCaseSection
+      :section="Section.Music"
+      name="music"
+      :data="data.music"
     />
 <!--
     <ShowCaseSection
