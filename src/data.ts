@@ -24,6 +24,8 @@ export const address = 'via Marzolo 8, 35121 Padova (Italy)';
 export const emails: string[] = [
   'pertoldi@pd.infn.it',
   'luigi.pertoldi@pd.infn.it',
+  'luigi.pertoldi@protonmail.com',
+  'luigi.pertoldi@pm.com',
 ];
 export const socialNetworks: { [key: string]: string } = {
   github: 'https://github.com/gipert',
