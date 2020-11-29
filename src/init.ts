@@ -67,7 +67,7 @@ Vue.mixin({
 });
 
 console.log(
-  '%cpd.infn.it/~pertoldi %c%c  master %c cat %cREADME.md\n\n%c# www.pd.infn.it/~pertoldi\n\nCheck out the source on [GitHub](https://github.com/gipert/www.pd.infn.it-pertoldi)',
+  '%cgipert.github.io %c%c  master %c cat %cREADME.md\n\n%c# gipert.github.io\n\nCheck out the source on [GitHub](https://github.com/gipert/gipert.github.io)',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #2E8CCF; color: #000000;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #2E8CCF;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #000000;',

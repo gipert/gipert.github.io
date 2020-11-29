@@ -22,7 +22,9 @@ export const my_name = 'Luigi Pertoldi';
 export const profession = 'Ph.D. Physics Student';
 export const address = 'via Marzolo 8, 35121 Padova (Italy)';
 export const emails: string[] = [
+  'gipert@pm.me',
   'pertoldi@pd.infn.it',
+  'luigi.pertoldi@tum.de',
   'luigi.pertoldi@pd.infn.it',
   'luigi.pertoldi@protonmail.com',
   'luigi.pertoldi@pm.com',

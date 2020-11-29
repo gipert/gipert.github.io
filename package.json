@@ -1,10 +1,10 @@
 {
-  "name": "tamino.dev",
+  "homepage": "https://gipert.github.io",
+  "name": "gipert.github.io",
   "private": true,
   "scripts": {
-    "watch": "scripts/watch.sh",
     "build": "scripts/build.sh",
-    "start": "scripts/start.sh",
+    "predeploy": "npm run build",
     "deploy": "scripts/deploy.sh"
   },
   "devDependencies": {
@@ -14,6 +14,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.6.0",
     "file-loader": "^4.3.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "offline-plugin": "^5.0.7",
     "raw-loader": "^3.1.0",
