@@ -1,4 +1,6 @@
-# www.pd.infn.it/~pertoldi [![Build Status](https://travis-ci.com/gipert/www.pd.infn.it-pertoldi.svg?branch=master)](https://travis-ci.com/gipert/www.pd.infn.it-pertoldi)
+# [gipert.github.io](https://gipert.github.io)
+
+![Build Status](https://github.com/gipert/gipert.github.io/workflows/Build%20and%20Deploy/badge.svg)
 
 Build instructions:
 ```
