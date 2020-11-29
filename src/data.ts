@@ -19,8 +19,8 @@ export const state = new State();
 *********/
 
 export const my_name = 'Luigi Pertoldi';
-export const profession = 'Ph.D. Physics Student';
-export const address = 'via Marzolo 8, 35121 Padova (Italy)';
+export const profession = 'Postdoctoral researcher';
+export const address = 'TUM Physik Department (E15), James-Franck-Str. 1, 85748 Garching (DE)';
 export const emails: string[] = [
   'gipert@pm.me',
   'pertoldi@pd.infn.it',
