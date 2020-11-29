@@ -5,7 +5,7 @@
   "scripts": {
     "build": "scripts/build.sh",
     "predeploy": "npm run build",
-    "deploy": "scripts/deploy.sh"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@types/node": "^12.12.50",
