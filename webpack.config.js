@@ -114,7 +114,7 @@ var minifyOptions = {
 };
 
 /// Export
-const title = 'pd.infn.it/~pertoldi.ts';
+const title = 'gipert.github.io.ts';
 const path = '/';
 
 const transform = (content, filePath) => {
