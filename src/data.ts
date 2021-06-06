@@ -122,9 +122,13 @@ export const curriculumVitae: (Job | Education)[] = [
     description: `
       I am mainly working on the background model and liquid argon veto model of
       the GERDA experiment. I am one of the "simulations and background study
-      task group" leaders.
+      task group" leaders. The title of my thesis is "Search for new physics
+      with two-neutrino double-beta decay in GERDA data".
     `,
     urls: [
+      'https://github.com/gipert/phd-thesis/releases/download/v1.1/pertoldi-phd-thesis.pdf',
+      'https://github.com/gipert/phd-thesis/releases/download/v1.1/pertoldi-phd-slides.pdf',
+      'https://github.com/gipert/phd-thesis',
       'https://github.com/gipert/gerda-fitter',
       'https://github.com/gipert/gerda-factory',
       'https://github.com/gipert/gerda-larmap',
@@ -193,6 +197,23 @@ export const curriculumVitae: (Job | Education)[] = [
 ********/
 
 export const talks: ShowCase[] = [
+  {
+    name: 'The Simulation of Neutrinoless double beta decay experiments',
+    description: `
+      A contribution to the kick-off meeting of the French underground physics
+      community about the simulation framework developed by the GERDA and LEGEND
+      collaborations.
+    `,
+    startsAt: new Date('2021'),
+    endsAt: new Date('2021'),
+    urls: [
+      'https://indico.in2p3.fr/event/23971/contributions/95735/',
+      'https://indico.in2p3.fr/event/23971/contributions/95735/attachments/64513/89539/GdR-DUPhy-Pertoldi.pdf',
+    ],
+    media: [],
+    skills: {
+    },
+  },
   {
     name: 'Modeling of GERDA Phase II data',
     description: `
