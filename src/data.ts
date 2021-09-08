@@ -198,6 +198,21 @@ export const curriculumVitae: (Job | Education)[] = [
 
 export const talks: ShowCase[] = [
   {
+    name: 'Final Results of GERDA on the Search for Neutrinoless Double-β Decay',
+    description: `
+      Presentation of the final results of the GERDA experiment at the PANIC 2021 conference.
+    `,
+    startsAt: new Date('2021'),
+    endsAt: new Date('2021'),
+    urls: [
+      'https://indico.lip.pt/event/592/contributions/3302/',
+      'https://indico.lip.pt/event/592/contributions/3302/attachments/2786/4394/PANIC2021_edited_conf.pdf'
+    ],
+    media: [],
+    skills: {
+    },
+  },
+  {
     name: 'The Simulation of Neutrinoless double beta decay experiments',
     description: `
       A contribution to the kick-off meeting of the French underground physics
