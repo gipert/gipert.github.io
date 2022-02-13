@@ -198,6 +198,22 @@ export const curriculumVitae: (Job | Education)[] = [
 
 export const talks: ShowCase[] = [
   {
+    name: 'The LEGEND project: Majorana neutrinos beyond the inverted ordering',
+    description: `
+      Seminar on the status of the LEGEND experiment I gave as part of the SFB-1258 colloquy series.
+    `,
+    startsAt: new Date('2021-12-14'),
+    endsAt: new Date('2021-12-14'),
+    urls: [
+      'https://www.sfb1258.de',
+      'https://gipert.github.io/files/202112-SFB-colloquy_edited.pdf',
+      'https://www.sfb1258.de/previous-events/detail/16-nov-1000-colloquy-on-modern-neutrino-cosmology-and-madmax-1'
+    ],
+    media: [],
+    skills: {
+    },
+  },
+  {
     name: 'Final Results of GERDA on the Search for Neutrinoless Double-β Decay',
     description: `
       Presentation of the final results of the GERDA experiment at the PANIC 2021 conference.
