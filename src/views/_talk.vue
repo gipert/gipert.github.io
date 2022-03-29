@@ -1,5 +1,5 @@
 <template>
-  <div class="stage" @click.stop="toggle" :class="{ collapsed: collapsed }">
+  <div class="talk" @click.stop="toggle" :class="{ collapsed: collapsed }">
     <Comment
       :indentation="1"
       v-if="collapsed"
@@ -11,6 +11,14 @@
       <CodeLine>
         <Tab/>
         <span class="expression">{</span>
+      </CodeLine>
+      <CodeLine>
+        <Tab/><Tab/>
+        <VariableName name="title"/>
+        <span class="expression">:</span>
+        <span class="white-space space"></span>
+        <String :value="data.title"></String>
+        <span class="expression">,</span>
       </CodeLine>
       <slot/>
       <template v-if="data.description">
@@ -55,38 +63,12 @@
       </template>
       <CodeLine>
         <Tab/><Tab/>
-        <VariableName name="startsAt"/>
+        <VariableName name="date"/>
         <span class="expression">:</span>
         <span class="white-space space"></span>
-        <Date :value="data.startsAt"></Date>
+        <Date :value="data.date"></Date>
         <span class="expression">,</span>
       </CodeLine>
-      <CodeLine>
-        <Tab/><Tab/>
-        <VariableName name="endsAt"/>
-        <span class="expression">:</span>
-        <span class="white-space space"></span>
-        <Date :value="data.endsAt"></Date>
-        <span class="expression">,</span>
-      </CodeLine>
-      <template v-if="data.skills">
-        <CodeLine>
-          <Tab/><Tab/>
-          <VariableName name="skills"/>
-          <span class="expression">:</span>
-          <span class="white-space space"></span>
-          <span class="expression">[</span>
-        </CodeLine>
-        <CodeLine v-for="(skill, key) in data.skills" :key="key">
-          <Tab/><Tab/><Tab/>
-          <span class="variable progress" :style="{ '--value': skill.level }">{{key}}</span>
-          <span class="expression">,</span>
-        </CodeLine>
-        <CodeLine>
-          <Tab/><Tab/>
-          <span class="expression">],</span>
-        </CodeLine>
-      </template>
       <CodeLine>
         <Tab/>
         <span class="expression">}</span>
@@ -125,13 +107,16 @@
     methods: {
       toggle() {
         this.collapsed = !this.collapsed;
-        track((this.collapsed ? 'Close' : 'Open') + 'Stage', this.abbreviation);
+        track((this.collapsed ? 'Close' : 'Open') + 'Talk', this.abbreviation);
       },
     },
     computed: {
+      abbreviation() {
+        return '[' + this.data.date.getFullYear() + '] ' + this.data.title;
+      },
       multiStringStart() {
         this.collapsed = !this.collapsed;
-        track((this.collapsed ? 'Close' : 'Open') + 'Stage', this.abbreviation);
+        track((this.collapsed ? 'Close' : 'Open') + 'Talk', this.abbreviation);
       },
     },
     components: {

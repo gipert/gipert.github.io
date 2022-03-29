@@ -17,7 +17,7 @@
     <CurriculumVitae :data="data.curriculumVitae"/>
     <CodeLine/>
     <CodeLine/>
-    <ShowCaseSection
+    <TalkSection
       :section="Section.Talks"
       name="talks"
       :data="data.talks"
@@ -32,23 +32,6 @@
       name="music"
       :data="data.music"
     />
-<!--
-    <ShowCaseSection
-      :section="Section.Experiments"
-      name="experiments"
-      :data="data.experiments"
-    />
-    <ShowCaseSection
-      :section="Section.Projects"
-      name="projects"
-      :data="data.projects"
-    />
-    <ShowCaseSection
-      :section="Section.Packages"
-      name="packages"
-      :data="data.packages"
-    />
--->
     <Legal/>
   </div>
 </template>
@@ -60,6 +43,7 @@
   import Section from './_section.vue';
   import CodeLine from './_code_line.vue';
   import CurriculumVitae from './_curriculum_vitae.vue';
+  import TalkSection from './_talk_section.vue';
   import ShowCaseSection from './_show_case_section.vue';
   import Legal from './_legal.vue';
   import Profile from "./_profile.vue";
@@ -80,6 +64,7 @@
       Section,
       CodeLine,
       CurriculumVitae,
+      TalkSection,
       ShowCaseSection,
       Legal,
       Profile,

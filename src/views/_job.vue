@@ -1,26 +1,30 @@
 <template>
   <Stage
     class="job"
-    :abbreviation="`${startYear}-${endYear} - ${firstInstitution} - ${mainPosition}`"
+    :abbreviation="`[${startYear}-${endYear}] ${firstInstitution} - ${mainPosition}`"
     :data="data"
     :isLast="isLast"
   >
-    <CodeLine>
-      <Tab/><Tab/>
-      <span class="variable">company</span>
-      <span class="expression">:</span>
-      <span class="white-space space"></span>
-      <String :value="data.company"></String>
-      <span class="expression">,</span>
-    </CodeLine>
-    <CodeLine>
-      <Tab/><Tab/>
-      <VariableName name="remote"/>
-      <span class="expression">:</span>
-      <span class="white-space space"></span>
-      <Boolean :value="data.remote"></Boolean>
-      <span class="expression">,</span>
-    </CodeLine>
+    <template v-if="data.company">
+      <CodeLine>
+        <Tab/><Tab/>
+        <span class="variable">company</span>
+        <span class="expression">:</span>
+        <span class="white-space space"></span>
+        <String :value="data.company"></String>
+        <span class="expression">,</span>
+      </CodeLine>
+    </template>
+    <template v-if="data.remote">
+      <CodeLine>
+        <Tab/><Tab/>
+        <VariableName name="remote"/>
+        <span class="expression">:</span>
+        <span class="white-space space"></span>
+        <Boolean :value="data.remote"></Boolean>
+        <span class="expression">,</span>
+      </CodeLine>
+    </template>
     <template v-if="Array.isArray(data.position)">
       <CodeLine>
         <Tab/><Tab/>

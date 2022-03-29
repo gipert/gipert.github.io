@@ -1,7 +1,7 @@
 <template>
   <Stage
     class="education"
-    :abbreviation="`${startYear}-${endYear} - ${place} - ${data.graduation}`"
+    :abbreviation="`[${startYear}-${endYear}] ${place} - ${data.graduation}`"
     :data="data"
     :isLast="isLast"
   >

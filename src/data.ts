@@ -2,6 +2,7 @@ import {
   Stage,
   Job,
   Education,
+  Talk,
   ShowCase,
   Skill,
   SkillSet,
@@ -19,7 +20,7 @@ export const state = new State();
 *********/
 
 export const my_name = 'Luigi Pertoldi';
-export const profession = 'Postdoctoral researcher';
+export const profession = 'Post-doctoral researcher';
 export const address = 'TUM Physik Department (E15), James-Franck-Str. 1, 85748 Garching (DE)';
 export const emails: string[] = [
   'gipert@pm.me',
@@ -116,6 +117,22 @@ export const skills: SkillSet[] = [
 export const curriculumVitae: (Job | Education)[] = [
   {
     institution: [
+      'Technische Universität München',
+      'INFN Sezione di Padova',
+    ],
+    description: `
+      Working on data analysis and Monte Carlo simulations for the GERDA and
+      LEGEND experiments.
+    `,
+    urls: [
+      'https://www.ph.tum.de/about/people/vcard/727D81B5400139BA',
+    ],
+    startsAt: new Date('2020-11-01'),
+    position: 'Post-doctoral researcher',
+  },
+
+  {
+    institution: [
       'INFN Sezione di Padova',
       'Università degli Studi di Padova',
     ],
@@ -196,168 +213,97 @@ export const curriculumVitae: (Job | Education)[] = [
 * Talks *
 ********/
 
-export const talks: ShowCase[] = [
+export const talks: Talk[] = [
   {
-    name: 'The LEGEND project: Majorana neutrinos beyond the inverted ordering',
+    title: 'Searching for matter creation with GERDA and beyond',
     description: `
-      Seminar on the status of the LEGEND experiment I gave as part of the SFB-1258 colloquy series.
+      A talk about the legacy of the GERDA experiment and the future of LEGEND
+      I gave at the Rencontres de Moriond conference (Electroweak Interactions
+      & Unified Theories) in La Thuile (IT).
     `,
-    startsAt: new Date('2021-12-14'),
-    endsAt: new Date('2021-12-14'),
+    date: new Date('2022-03-16'),
+    urls: [
+      'https://moriond.in2p3.fr/2022/EW/slides/4/1/5_LPertoldi-short-v1.pdf-short.pdf',
+      'https://moriond.in2p3.fr/2022/EW/',
+    ],
+  },
+  {
+    title: 'The LEGEND project: Majorana neutrinos beyond the inverted ordering',
+    description: `
+      Seminar on the status of the LEGEND experiment I gave as part of the
+      SFB-1258 colloquy series.
+    `,
+    date: new Date('2021-12-14'),
     urls: [
       'https://www.sfb1258.de',
       'https://gipert.github.io/files/202112-SFB-colloquy_edited.pdf',
       'https://www.sfb1258.de/previous-events/detail/16-nov-1000-colloquy-on-modern-neutrino-cosmology-and-madmax-1'
     ],
-    media: [],
-    skills: {
-    },
   },
   {
-    name: 'Final Results of GERDA on the Search for Neutrinoless Double-β Decay',
+    title: 'Final Results of GERDA on the Search for Neutrinoless Double-β Decay',
     description: `
-      Presentation of the final results of the GERDA experiment at the PANIC 2021 conference.
+      Presentation of the final results of the GERDA experiment at the PANIC
+      2021 conference.
     `,
-    startsAt: new Date('2021'),
-    endsAt: new Date('2021'),
+    date: new Date('2021-09-08'),
     urls: [
       'https://indico.lip.pt/event/592/contributions/3302/',
       'https://indico.lip.pt/event/592/contributions/3302/attachments/2786/4394/PANIC2021_edited_conf.pdf'
     ],
-    media: [],
-    skills: {
-    },
   },
   {
-    name: 'The Simulation of Neutrinoless double beta decay experiments',
+    title: 'The Simulation of Neutrinoless double beta decay experiments',
     description: `
       A contribution to the kick-off meeting of the French underground physics
       community about the simulation framework developed by the GERDA and LEGEND
       collaborations.
     `,
-    startsAt: new Date('2021'),
-    endsAt: new Date('2021'),
+    date: new Date('2021-06-01'),
     urls: [
       'https://indico.in2p3.fr/event/23971/contributions/95735/',
       'https://indico.in2p3.fr/event/23971/contributions/95735/attachments/64513/89539/GdR-DUPhy-Pertoldi.pdf',
     ],
-    media: [],
-    skills: {
-    },
   },
   {
-    name: 'Modeling of GERDA Phase II data',
+    title: 'Modeling of GERDA Phase II data',
     description: `
       A poster presented at the Neutrino2020 conference toghether with K. v.
       Sturm about the GERDA background model. We presented the background
       decomposition of single- and two-detector data in GERDA Phase II.
     `,
-    startsAt: new Date('2020'),
-    endsAt: new Date('2020'),
+    date: new Date('2020-06-22'),
     urls: [
       'https://indico.fnal.gov/event/19348/contributions/186251',
       'https://doi.org/10.1007/JHEP03(2020)139',
     ],
-    media: [],
-    skills: {
-    },
   },
   {
-    name: 'Searching 0νββ with GERDA Phase II',
+    title: 'Searching 0νββ with GERDA Phase II',
     description: `
       A talk on the latest data release (presented at the Neutrino 2018
       conference in Heidelberg) of GERDA Phase II held at the 'Revealing the
       history of the universe with underground particle and nuclear research
       2019' conference in Sendai, Japan.
     `,
-    startsAt: new Date('2019'),
-    endsAt: new Date('2019'),
+    date: new Date('2019-03-07'),
     urls: [
       'http://www.lowbg.org/ugnd/workshop/sympo_all/201903_Sendai/slides/7pm/7pm_5.pdf',
     ],
-    media: [],
-    skills: {
-    },
   },
   {
-    name: 'Il modello di fondo di GERDA Fase II',
-    description: `
-      A short talk about the preliminary results of the GERDA Phase II
-      background model presented at Società Italiana di Fisica (SIF) 104th
-      national congress.
-    `,
-    startsAt: new Date('2018'),
-    endsAt: new Date('2018'),
-    urls: [
-      'https://gipert.github.io/files/SIF2018.pdf',
-    ],
-    media: [],
-    skills: {
-    },
-  },
-  {
-    name: 'The Bayesian Blocks algorithm',
+    title: 'The Bayesian Blocks algorithm',
     description: `
       An overview of the Bayesian Blocks as a non-parametric representation of
       data proposed by J. D. Scargle in 1998 for time series analysis in
       Astrophysics. I implement the method in C++ and Julia and apply it to the
       energy spectrum of the GERDA experiment.
     `,
-    startsAt: new Date('2018'),
-    endsAt: new Date('2018'),
+    date: new Date('2018-07-19'),
     urls: [
       'https://gipert.github.io/files/bayesian-blocks.pdf',
       'https://github.com/gipert/bayesian-blocks',
     ],
-    media: [],
-    skills: {
-    },
-  },
-  {
-    name: 'Tools and methodologies for GERDA Phase II background modeling',
-    description: `
-      A poster I presented at the International Neutrino Summer School 2018
-      about the revised background model we adopted for the second phase of
-      the experiment. Some preliminary results are also discussed.
-    `,
-    startsAt: new Date('2018'),
-    endsAt: new Date('2018'),
-    urls: [
-      'https://gipert.github.io/files/INSS2018-poster.pdf',
-    ],
-    media: [],
-    skills: {
-    },
-  },
-  {
-    name: 'Ricerca del doppio decadimento beta senza neutrini 0νββ in Gerda fase II',
-    description: `
-      A short general talk about the GERDA experiment and most recent results.
-      The talk was presented at IFAE conference 2018.
-    `,
-    startsAt: new Date('2018'),
-    endsAt: new Date('2018'),
-    urls: [
-      'https://tinyurl.com/ifae2018pertoldi',
-    ],
-    media: [],
-    skills: {
-    },
-  },
-  {
-    name: 'Ricerca di violazione delle simmetrie di Lorentz e CPT nel 2νββ con GERDA',
-    description: `
-      A short talk about the results of my master thesis project presented at Società
-      Italiana di Fisica (SIF) 103rd national congress.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: new Date('2017'),
-    urls: [
-      'https://github.com/gipert/master-thesis/blob/master/slides/slides.pdf',
-    ],
-    media: [],
-    skills: {
-    },
   },
 ];
 

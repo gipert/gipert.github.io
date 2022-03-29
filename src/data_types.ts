@@ -5,9 +5,6 @@ export enum Section {
   Talks,
   Projects,
   Music,
-  // Misc,
-  // Experiments,
-  // Packages,
 };
 
 export enum Language {
@@ -27,13 +24,13 @@ export interface Stage {
   startsAt: Date,
   endsAt?: Date,
   urls?: string[],
-  skills: { [key: string]: Skill },
+  skills?: { [key: string]: Skill },
 };
 
 export interface Job extends Stage {
   institution?: string | string[],
   company?: string,
-  remote: boolean,
+  remote?: boolean,
   position: string | string[],
 };
 
@@ -41,6 +38,14 @@ export interface Education extends Stage {
   institution?: string | string[],
   university?: string,
   graduation: string,
+};
+
+export interface Talk {
+  title: string,
+  description?: string,
+  date: Date,
+  urls: string[],
+  media?: string[],
 };
 
 export interface ShowCase extends Stage {
