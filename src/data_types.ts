@@ -21,7 +21,7 @@ export const languages: Language[] = [
 
 export interface Stage {
   description?: string,
-  startsAt: Date,
+  startsAt?: Date,
   endsAt?: Date,
   urls?: string[],
   skills?: { [key: string]: Skill },
@@ -50,7 +50,7 @@ export interface Talk {
 
 export interface ShowCase extends Stage {
   name: string,
-  media: string[],
+  media?: string[],
 };
 
 export interface Skill {

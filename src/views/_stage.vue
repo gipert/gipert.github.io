@@ -53,22 +53,26 @@
           <span class="expression">],</span>
         </CodeLine>
       </template>
-      <CodeLine>
-        <Tab/><Tab/>
-        <VariableName name="startsAt"/>
-        <span class="expression">:</span>
-        <span class="white-space space"></span>
-        <Date :value="data.startsAt"></Date>
-        <span class="expression">,</span>
-      </CodeLine>
-      <CodeLine>
-        <Tab/><Tab/>
-        <VariableName name="endsAt"/>
-        <span class="expression">:</span>
-        <span class="white-space space"></span>
-        <Date :value="data.endsAt"></Date>
-        <span class="expression">,</span>
-      </CodeLine>
+      <template v-if="data.startsAt">
+        <CodeLine>
+          <Tab/><Tab/>
+          <VariableName name="startsAt"/>
+          <span class="expression">:</span>
+          <span class="white-space space"></span>
+          <Date :value="data.startsAt"></Date>
+          <span class="expression">,</span>
+        </CodeLine>
+      </template>
+      <template v-if="data.endsAt">
+        <CodeLine>
+          <Tab/><Tab/>
+          <VariableName name="endsAt"/>
+          <span class="expression">:</span>
+          <span class="white-space space"></span>
+          <Date :value="data.endsAt"></Date>
+          <span class="expression">,</span>
+        </CodeLine>
+      </template>
       <template v-if="data.skills">
         <CodeLine>
           <Tab/><Tab/>

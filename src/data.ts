@@ -321,12 +321,10 @@ export const music: ShowCase[] = [
       transcribed over the years.
     `,
     startsAt: new Date('2014'),
-    endsAt: new Date('20??'),
     urls: [
       'https://gipert.github.io/sheet-music',
       'https://gumroad.com/luigipertoldi',
     ],
-    media: [],
     skills: {
       finale,
       lilypond,
@@ -347,14 +345,11 @@ export const projects: ShowCase[] = [
       Julia and C++ Implementations of the bayesian blocks algorithm,
       originally designed by J. D. Scargle in 1998.
     `,
-    startsAt: new Date('2019'),
-    endsAt: new Date('2019'),
     urls: [
       'https://github.com/gipert/bayesian-blocks',
       'https://doi.org/10.1088/0004-637X/764/2/167',
       'https://arxiv.org/abs/1708.00810',
     ],
-    media: [],
     skills: {
         cpp,
         julia,
@@ -367,12 +362,9 @@ export const projects: ShowCase[] = [
       for data in the form of ROOT histograms. Taylored on GERDA data and
       Probability Density Functions.
     `,
-    startsAt: new Date('2019'),
-    endsAt: new Date('2020'),
     urls: [
       'https://github.com/gipert/gerda-fitter',
     ],
-    media: [],
     skills: {
         cpp,
         bat,
@@ -384,13 +376,10 @@ export const projects: ShowCase[] = [
     description: `
       Header-only poisson smallest interval computing and drawing utilities.
     `,
-    startsAt: new Date('2019'),
-    endsAt: new Date('2019'),
     urls: [
       'https://gist.github.com/gipert/194f8fb16cbc41dee7586ab04483b659',
       'https://doi.org/10.1140/epjp/i2012-12024-0',
     ],
-    media: [],
     skills: {
         cpp,
         root,
@@ -402,12 +391,9 @@ export const projects: ShowCase[] = [
       A very simple, header-only, fully customizable, progress bar (with
       percentage) for C++ loops.
     `,
-    startsAt: new Date('2016'),
-    endsAt: new Date('2020'),
     urls: [
       'https://github.com/gipert/progressbar',
     ],
-    media: [],
     skills: {
         cpp,
     },
@@ -418,12 +404,9 @@ export const projects: ShowCase[] = [
       Beautiful HPGe detector technical drawing library written in the
       gorgeous Asymptote vector graphics language.
     `,
-    startsAt: new Date('2019'),
-    endsAt: new Date('2020'),
     urls: [
       'https://github.com/gipert/gedet-plots',
     ],
-    media: [],
     skills: {
         asymptote,
     },
@@ -433,36 +416,15 @@ export const projects: ShowCase[] = [
     description: `
       The Singularity and Docker images I use the most.
     `,
-    startsAt: new Date('2017'),
-    endsAt: new Date('20??'),
     urls: [
       'https://github.com/gipert/Dockerfiles',
       'https://github.com/gipert/Singularity.def',
       'https://hub.docker.com/u/gipert/',
       'https://cloud.sylabs.io/library/gipert',
     ],
-    media: [],
     skills: {
         docker,
         singularity,
-    },
-  },
-  {
-    name: 'Singularity virtual environments manager',
-    description: `
-      A simple and customizable application written in Bash to manage a
-      container depot. Allows executing commands, opening shells inside a
-      registered container from any location. Concept stolen from
-      oschulz/singularity-venv.
-    `,
-    startsAt: new Date('2020'),
-    endsAt: new Date('2020'),
-    urls: [
-      'https://github.com/gipert/singularity-venv',
-    ],
-    media: [],
-    skills: {
-        bash,
     },
   },
   {
@@ -477,7 +439,6 @@ export const projects: ShowCase[] = [
       'https://gist.github.com/gipert/df72b67c1d02bbb41f1dd406b6397811',
       'https://personal.sron.nl/~pault/data/colourschemes.pdf',
     ],
-    media: [],
     skills: {
         root,
     },
@@ -492,7 +453,6 @@ export const projects: ShowCase[] = [
     urls: [
       'https://github.com/gipert/.dotfiles',
     ],
-    media: [],
     skills: {
       unix_clt,
     },
