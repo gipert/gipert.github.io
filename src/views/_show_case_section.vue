@@ -3,8 +3,8 @@
     <Section :section="section"></Section>
     <CodeLine/>
     <CodeLine>
-      <span class="storage-type" v-if="isJs">const</span>
-      <span class="white-space space" v-if="isJs"></span>
+      <span class="storage-type" v-if="isJs || isJulia">const</span>
+      <span class="white-space space" v-if="isJs || isJulia"></span>
       <span class="variable">{{name}}</span>
       <span class="keyword" v-if="isTs">:</span>
       <span class="white-space space" v-if="isTs"></span>

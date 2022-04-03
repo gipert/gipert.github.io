@@ -1,8 +1,8 @@
 <template>
   <div class="curriculum-vitae">
     <CodeLine>
-      <span class="storage-type" v-if="isJs">const</span>
-      <span class="white-space space" v-if="isJs"></span>
+      <span class="storage-type" v-if="isJs || isJulia">const</span>
+      <span class="white-space space" v-if="isJs || isJulia"></span>
       <VariableName name="curriculumVitae"/>
       <span class="variable">{{title}}</span>
       <span class="keyword" v-if="isTs">:</span>

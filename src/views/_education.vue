@@ -8,8 +8,10 @@
     <template v-if="data.university">
       <CodeLine>
         <Tab/><Tab/>
-        <VariableName name="university"/>
-        <span class="expression">:</span>
+        <JuliaSymbol name="university" v-if="isJulia"/>
+        <VariableName name="university" v-else/>
+        <span class="white-space space" v-if="isJulia"></span>
+        <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
         <span class="white-space space"></span>
         <String :value="data.university"></String>
         <span class="expression">,</span>
@@ -19,9 +21,11 @@
       <template v-if="Array.isArray(data.institution)">
         <CodeLine>
           <Tab/><Tab/>
-          <VariableName name="institution"/>
-          <span class="expression">:</span>
-          <span class="white-space space">:</span>
+          <JuliaSymbol name="institution" v-if="isJulia"/>
+          <VariableName name="institution" v-else/>
+          <span class="white-space space" v-if="isJulia"></span>
+          <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
+          <span class="white-space space"></span>
           <span class="expression">[</span>
         </CodeLine>
         <CodeLine v-for="institution in data.institution" :key="institution">
@@ -37,8 +41,10 @@
       <template v-else>
         <CodeLine>
           <Tab/><Tab/>
-          <VariableName name="institution"/>
-          <span class="expression">:</span>
+          <JuliaSymbol name="institution" v-if="isJulia"/>
+          <VariableName name="institution" v-else/>
+          <span class="white-space space" v-if="isJulia"></span>
+          <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
           <span class="white-space space"></span>
           <String :value="data.institution"></String>
           <span class="expression">,</span>
@@ -47,8 +53,10 @@
     </template>
     <CodeLine>
       <Tab/><Tab/>
-      <VariableName name="graduation"/>
-      <span class="expression">:</span>
+      <JuliaSymbol name="graduation" v-if="isJulia"/>
+      <VariableName name="graduation" v-else/>
+      <span class="white-space space" v-if="isJulia"></span>
+      <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
       <span class="white-space space"></span>
       <String :value="data.graduation"></String>
       <span class="expression">,</span>
@@ -62,6 +70,7 @@
   import String from './_string.vue';
   import Stage from './_stage.vue';
   import VariableName from './_variable_name.vue';
+  import JuliaSymbol from './_symbol.vue';
 
   export default {
     props: [
@@ -93,6 +102,7 @@
       String,
       Stage,
       VariableName,
+      JuliaSymbol,
     },
   };
 </script>

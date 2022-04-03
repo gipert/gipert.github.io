@@ -8,8 +8,10 @@
     <template v-if="data.company">
       <CodeLine>
         <Tab/><Tab/>
-        <span class="variable">company</span>
-        <span class="expression">:</span>
+        <JuliaSymbol name="company" v-if="isJulia"/>
+        <VariableName name="company" v-else/>
+        <span class="white-space space" v-if="isJulia"></span>
+        <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
         <span class="white-space space"></span>
         <String :value="data.company"></String>
         <span class="expression">,</span>
@@ -18,8 +20,10 @@
     <template v-if="data.remote">
       <CodeLine>
         <Tab/><Tab/>
-        <VariableName name="remote"/>
-        <span class="expression">:</span>
+        <JuliaSymbol name="remote" v-if="isJulia"/>
+        <VariableName name="remote" v-else/>
+        <span class="white-space space" v-if="isJulia"></span>
+        <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
         <span class="white-space space"></span>
         <Boolean :value="data.remote"></Boolean>
         <span class="expression">,</span>
@@ -28,8 +32,10 @@
     <template v-if="Array.isArray(data.position)">
       <CodeLine>
         <Tab/><Tab/>
-      <VariableName name="position"/>
-        <span class="expression">:</span>
+        <JuliaSymbol name="position" v-if="isJulia"/>
+        <VariableName name="position" v-else/>
+        <span class="white-space space" v-if="isJulia"></span>
+        <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
         <span class="white-space space"></span>
         <span class="expression">[</span>
       </CodeLine>
@@ -46,8 +52,10 @@
     <template v-else>
       <CodeLine>
         <Tab/><Tab/>
-        <VariableName name="position"/>
-        <span class="expression">:</span>
+        <JuliaSymbol name="position" v-if="isJulia"/>
+        <VariableName name="position" v-else/>
+        <span class="white-space space" v-if="isJulia"></span>
+        <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
         <span class="white-space space"></span>
         <String :value="data.position"></String>
         <span class="expression">,</span>
@@ -63,6 +71,7 @@
   import Boolean from './_boolean.vue';
   import Stage from './_stage.vue';
   import VariableName from './_variable_name.vue';
+  import JuliaSymbol from './_symbol.vue';
 
   export default {
     props: [
@@ -76,6 +85,7 @@
       Boolean,
       Stage,
       VariableName,
+      JuliaSymbol,
     },
     computed: {
       startYear() {

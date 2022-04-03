@@ -11,12 +11,14 @@ export enum Language {
   ruby,
   typescript,
   javascript,
+  julia,
 };
 
 export const languages: Language[] = [
   Language.ruby,
   Language.typescript,
   Language.javascript,
+  Language.julia,
 ];
 
 export interface Stage {
@@ -87,6 +89,7 @@ export class State {
       case Language.ruby: { document.title = title + 'rb'; break; }
       case Language.typescript: { document.title = title + 'ts'; break; }
       case Language.javascript: { document.title = title + 'js'; break; }
+      case Language.julia: { document.title = title + 'jl'; break; }
     }
   }
 };
@@ -97,22 +100,65 @@ export class LanguageHelper {
   }
 
   get commentChar() {
-    return this.language === Language.ruby ? '#' : '*';
+    switch (this.language) {
+      case Language.ruby: { return '#'; break; }
+      case Language.typescript: { return '*'; break; }
+      case Language.javascript: { return '*'; break; }
+      case Language.julia: { return '#'; break; }
+    }
   }
 
   get commentEnd() {
-    return this.language === Language.ruby ? '#' : '/';
+    switch (this.language) {
+      case Language.ruby: { return '#'; break; }
+      case Language.typescript: { return '/'; break; }
+      case Language.javascript: { return '/'; break; }
+      case Language.julia: { return '#'; break; }
+    }
+  }
+
+  get stringChar() {
+    switch (this.language) {
+      case Language.ruby: { return '\''; break; }
+      case Language.typescript: { return '\''; break; }
+      case Language.javascript: { return '\''; break; }
+      case Language.julia: { return '"'; break; }
+    }
   }
 
   get multilineString() {
-    return this.language === Language.ruby ? '\'' : '`';
+    switch (this.language) {
+      case Language.ruby: { return '\''; break; }
+      case Language.typescript: { return '`'; break; }
+      case Language.javascript: { return '`'; break; }
+      case Language.julia: { return '"""'; break; }
+    }
   }
 
   get comment() {
-    return this.language === Language.ruby ? '#' : '//';
+    switch (this.language) {
+      case Language.ruby: { return '#'; break; }
+      case Language.typescript: { return '//'; break; }
+      case Language.javascript: { return '//'; break; }
+      case Language.julia: { return '#'; break; }
+    }
   }
 
   get undefined() {
-    return this.language === Language.ruby ? 'nil' : 'undefined';
+    switch (this.language) {
+      case Language.ruby: { return 'nil'; break; }
+      case Language.typescript: { return 'undefined'; break; }
+      case Language.javascript: { return 'undefined'; break; }
+      case Language.julia: { return 'nothing'; break; }
+    }
+  }
+
+  get relationalOp() {
+    switch (this.language) {
+      case Language.ruby: { return ':'; break; }
+      case Language.typescript: { return ':'; break; }
+      case Language.javascript: { return ':'; break; }
+      case Language.julia: { return '=>'; break; }
+    }
   }
 };

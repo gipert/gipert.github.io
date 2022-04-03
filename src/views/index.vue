@@ -1,15 +1,14 @@
 <template>
   <div id="view" class="hidden">
     <CodeLine/>
+    <Comment comment="Hit 'J' for Julia, 'R' for Ruby, 'T' for Typescript"/>
+    <Comment comment="Hit the spacebar to cycle through colorschemes"/>
+    <CodeLine/>
     <Profile :data="data"/>
     <Section :section="Section.Skills"></Section>
     <CodeLine/>
     <template v-for="skillset in data.skills">
-      <SkillSet
-        :title="skillset.title"
-        :skillset="skillset"
-        :key="skillset.title"
-      />
+      <SkillSet :title="skillset.title" :skillset="skillset" :key="skillset.title"/>
     </template>
     <CodeLine/>
     <Section :section="Section.CurriculumVitae"></Section>
@@ -17,21 +16,9 @@
     <CurriculumVitae :data="data.curriculumVitae"/>
     <CodeLine/>
     <CodeLine/>
-    <TalkSection
-      :section="Section.Talks"
-      name="talks"
-      :data="data.talks"
-    />
-    <ShowCaseSection
-      :section="Section.Projects"
-      name="projects"
-      :data="data.projects"
-    />
-    <ShowCaseSection
-      :section="Section.Music"
-      name="music"
-      :data="data.music"
-    />
+    <TalkSection :section="Section.Talks" name="talks" :data="data.talks"/>
+    <ShowCaseSection :section="Section.Projects" name="projects" :data="data.projects"/>
+    <ShowCaseSection :section="Section.Music" name="music" :data="data.music"/>
     <Legal/>
   </div>
 </template>
@@ -39,6 +26,7 @@
 <script lang="ts">
   import * as data from '../data';
 
+  import Comment from './_comment.vue';
   import SkillSet from './_skill_set.vue';
   import Section from './_section.vue';
   import CodeLine from './_code_line.vue';
@@ -60,6 +48,7 @@
       },
     },
     components: {
+      Comment,
       SkillSet,
       Section,
       CodeLine,

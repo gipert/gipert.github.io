@@ -5,6 +5,9 @@ import { state } from './data';
 import { snakeCase } from './util';
 import { Section, Language, languages } from './data_types';
 
+// 0 -> Monokai (in index.html)
+// 1 -> One Dark
+// 2 -> One Light
 let theme = 0;
 const themeCount = 3;
 
@@ -14,7 +17,7 @@ if (state.language === undefined) {
 
 document.addEventListener('keydown', function (e) {
   switch (e.which) {
-    case 32: {
+    case 32: { // space
       e.preventDefault();
       theme += 1;
       for (var i = 0; i < themeCount; i++) {
@@ -23,15 +26,16 @@ document.addEventListener('keydown', function (e) {
       document.body.classList.add(`theme-${theme % themeCount}`);
       break;
     }
-    case 82: {
+    case 82: { // R
       state.language = Language.ruby;
       break;
     }
-    case 74: {
-      state.language = Language.javascript;
+    case 74: { // J
+      // state.language = Language.javascript;
+      state.language = Language.julia;
       break;
     }
-    case 84: {
+    case 84: { // T
       state.language = Language.typescript;
       break;
     }
@@ -47,7 +51,8 @@ Vue.mixin({
   },
   methods: {
     snakeCase(str: string) {
-      return (<any>this).isRuby ? snakeCase(str) : str;
+      if ((<any>this).isRuby || (<any>this).isJulia) { return snakeCase(str); }
+      else { return str; }
     }
   },
   computed: {
@@ -62,6 +67,9 @@ Vue.mixin({
     },
     isRuby() {
       return this.state.currentLanguage === Language.ruby;
+    },
+    isJulia() {
+      return this.state.currentLanguage === Language.julia;
     },
   },
 });

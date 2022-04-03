@@ -7,8 +7,10 @@
   >
     <CodeLine>
       <Tab/><Tab/>
-      <VariableName name="name"/>
-      <span class="expression">:</span>
+      <JuliaSymbol name="name" v-if="isJulia"/>
+      <VariableName name="name" v-else/>
+      <span class="white-space space" v-if="isJulia"></span>
+      <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
       <span class="white-space space"></span>
       <String :value="data.name"></String>
       <span class="expression">,</span>
@@ -23,6 +25,7 @@
   import Url from './_url.vue';
   import Stage from './_stage.vue';
   import VariableName from './_variable_name.vue';
+  import JuliaSymbol from './_symbol.vue';
 
   export default {
     props: [
@@ -36,6 +39,7 @@
       Url,
       Stage,
       VariableName,
+      JuliaSymbol,
     },
   };
 </script>

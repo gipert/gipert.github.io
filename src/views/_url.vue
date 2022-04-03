@@ -1,6 +1,6 @@
 <template>
   <span class="string">
-    '<a :href="value" target="_blank" @click="openLink">{{display}}</a>'
+    {{state.currentLanguageHelper.stringChar}}<a :href="value" target="_blank" @click="openLink">{{display}}</a>{{state.currentLanguageHelper.stringChar}}
   </span>
 </template>
 

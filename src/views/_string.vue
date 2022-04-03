@@ -11,7 +11,9 @@
     ],
     computed: {
       content() {
-        return formatCode(`'${this.value}'`);
+        return formatCode(this.state.currentLanguageHelper.stringChar +
+                          `${this.value}` +
+                          this.state.currentLanguageHelper.stringChar);
       },
     },
   };

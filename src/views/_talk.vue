@@ -10,12 +10,15 @@
     <template v-if="!collapsed">
       <CodeLine>
         <Tab/>
-        <span class="expression">{</span>
+        <span class="type" v-if="isJulia">Dict</span><span class="expression" v-if="isJulia">(</span>
+        <span class="expression" v-else>{</span>
       </CodeLine>
       <CodeLine>
         <Tab/><Tab/>
-        <VariableName name="title"/>
-        <span class="expression">:</span>
+        <JuliaSymbol name="title" v-if="isJulia"/>
+        <VariableName name="title" v-else/>
+        <span class="white-space space" v-if="isJulia"></span>
+        <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
         <span class="white-space space"></span>
         <String :value="data.title"></String>
         <span class="expression">,</span>
@@ -24,8 +27,10 @@
       <template v-if="data.description">
         <CodeLine>
           <Tab/><Tab/>
-          <span class="variable">description</span>
-          <span class="expression">:</span>
+          <span class="symbol" v-if="isJulia">:description</span>
+          <span class="variable" v-else>description</span>
+          <span class="white-space space" v-if="isJulia"></span>
+          <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
           <span class="white-space space"></span>
           <span class="string">
             {{state.currentLanguageHelper.multilineString}}
@@ -46,8 +51,10 @@
       <template v-if="data.urls">
         <CodeLine>
           <Tab/><Tab/>
-          <VariableName name="urls"/>
-          <span class="expression">:</span>
+          <JuliaSymbol name="urls" v-if="isJulia"/>
+          <VariableName name="urls" v-else/>
+          <span class="white-space space" v-if="isJulia"></span>
+          <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
           <span class="white-space space"></span>
           <span class="expression">[</span>
         </CodeLine>
@@ -63,15 +70,18 @@
       </template>
       <CodeLine>
         <Tab/><Tab/>
-        <VariableName name="date"/>
-        <span class="expression">:</span>
+        <JuliaSymbol name="date" v-if="isJulia"/>
+        <VariableName name="date" v-else/>
+        <span class="white-space space" v-if="isJulia"></span>
+        <span class="expression">{{state.currentLanguageHelper.relationalOp}}</span>
         <span class="white-space space"></span>
         <Date :value="data.date"></Date>
         <span class="expression">,</span>
       </CodeLine>
       <CodeLine>
         <Tab/>
-        <span class="expression">}</span>
+        <span class="expression" v-if="isJulia">)</span>
+        <span class="expression" v-else>}</span>
         <span class="expression" v-if="isRuby">.with_indifferent_access</span>
         <span class="expression">,</span>
       </CodeLine>
@@ -91,6 +101,7 @@
   import Date from './_date.vue';
   import Collapsed from './_collapsed.vue';
   import VariableName from './_variable_name.vue';
+  import JuliaSymbol from './_symbol.vue';
   import Url from './_url.vue';
 
   export default {
@@ -128,6 +139,7 @@
       Date,
       Collapsed,
       VariableName,
+      JuliaSymbol,
       Url,
     },
   };
