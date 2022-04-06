@@ -1,8 +1,8 @@
 <template>
   <div id="view" class="hidden">
     <CodeLine/>
-    <Comment comment="Hit 'J' for Julia, 'R' for Ruby, 'T' for Typescript"/>
-    <Comment comment="Hit the spacebar to cycle through colorschemes"/>
+    <Comment comment="Press 'J' for Julia, 'R' for Ruby, 'T' for Typescript"/>
+    <Comment comment="Press spacebar to cycle through colorschemes"/>
     <CodeLine/>
     <Profile :data="data"/>
     <Section :section="Section.Skills"></Section>

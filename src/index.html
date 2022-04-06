@@ -46,32 +46,30 @@
     }
 
     body {
-      --color-background: #272822;
-      --color-white-space: #464741;
-      --color-collapsed: #464741;
-      --color-comment: #75715E;
-      --color-variable: #F8F8F2;
-      --color-expression: #F8F8F2;
-      --color-storage-type: #66D9EF;
-      --color-symbol: #FC9867;
-      --color-keyword: #F92672;
-      --color-type: #A6E22E;
-      --color-class: #A6E22E;
-      --color-string: #E6DB74;
-      --color-constant: #AE81FF;
-      --color-number: #AE81FF;
+      --color-background: #282828;   /* black     */
+      --color-white-space: #504945;  /* dark gray */
+      --color-collapsed: #504945;    /* dark gray */
+      --color-comment: #928374;      /* gray      */
+      --color-variable: #EBDBB2;     /* white     */
+      --color-expression: #EBDBB2;   /* white     */
+      --color-storage-type: #CC241D; /* red       */
+      --color-symbol: #458588;       /* cyan      */
+      --color-keyword: #CC241D;      /* red       */
+      --color-type: #D79921;         /* yellow    */
+      --color-class: #D79921;        /* yellow    */
+      --color-string: #98971A;       /* green     */
+      --color-constant: #B16286;     /* purple    */
+      --color-number: #B16286;       /* purple    */
 
-      --color-zsh-text: #899;
-      --color-zsh-path-background: #2E8CCF;
-      --color-zsh-path-foreground: #000;
-      --color-zsh-os-background: #272822;
-      --color-zsh-os-foreground: #F8F8F2;
-      --color-zsh-branch-background: #85981C;
-      --color-zsh-branch-foreground: #000;
-      --color-zsh-command-valid: #85981C;
-      --color-zsh-command-invalid: #C14C22;
-      --color-zsh-args: #cdd;
-      --color-zsh-args-autocomplete: #566;
+      --color-zsh-text: #918374;
+      --color-zsh-path-background: #458588;
+      --color-zsh-path-foreground: #282828;
+      --color-zsh-branch-background: #98971A;
+      --color-zsh-branch-foreground: #282828;
+      --color-zsh-command-valid: #98971A;
+      --color-zsh-command-invalid: #CC241D;
+      --color-zsh-args: #EBDBB2;
+      --color-zsh-args-autocomplete: #928374;
 
       margin: 0.3rem;
       background-color: var(--color-background);
@@ -139,7 +137,7 @@
     }
 
     .loader .args:before {
-      padding-left: 1rem;
+      padding-left: 0.5rem;
       color: var(--color-zsh-args);
     }
 
@@ -199,7 +197,7 @@
       </span>
     </div>
     <div class="line">
-      <span class="path">gipert.github.io</span>
+      <span class="path"> gipert.github.io</span>
       <span class="branch"> master</span>
       <span class="command"></span>
       <span class="args"></span>

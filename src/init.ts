@@ -5,11 +5,13 @@ import { state } from './data';
 import { snakeCase } from './util';
 import { Section, Language, languages } from './data_types';
 
-// 0 -> Monokai (in index.html)
-// 1 -> One Dark
-// 2 -> One Light
+// 0 -> Gruvbox (in index.html)
+// 1 -> Monokai
+// 2 -> One Dark
+// 3 -> Gruvbox Light
+// 4 -> One Light
 let theme = 0;
-const themeCount = 3;
+const themeCount = 5;
 
 if (state.language === undefined) {
   state.language = languages[Math.floor(Math.random() * languages.length)];

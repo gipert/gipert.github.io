@@ -1,5 +1,8 @@
 <template>
   <div class="legal" @click.stop="toggle" :class="{ collapsed: collapsed }">
+    <Comment comment="Website initially developed by Tamino Martinius"/>
+    <Comment comment="and modified by me. Original copyright notice:"/>
+    <CodeLine/>
     <Comment
       v-if="collapsed"
       :comment="`(c) ${year} Tamino Martinius`"
@@ -18,6 +21,7 @@
 
   import Comment from './_comment.vue';
   import CommentBlock from './_comment_block.vue';
+  import CodeLine from './_code_line.vue'
   import Collapsed from './_collapsed.vue';
 
   export default {
@@ -40,6 +44,7 @@
     components: {
       Comment,
       CommentBlock,
+      CodeLine,
       Collapsed,
     },
   };
