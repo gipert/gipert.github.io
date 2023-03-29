@@ -45,7 +45,7 @@ export const sailing_cv = 'https://gipert.github.io/files/sailing-cv.pdf';
 // Backend
 // Backend / Code
 export const cpp: Skill = { level: 0.8, name: 'C++' };
-export const python: Skill = { level: 0.5, name: 'Python' };
+export const python: Skill = { level: 0.8, name: 'Python' };
 export const julia: Skill = { level: 0.7, name: 'Julia' };
 export const latex: Skill = { level: 0.8, name: 'LaTeX typesetting system' };
 export const asymptote: Skill = { level: 0.6, name: 'Asymptote vector graphics language' };
@@ -137,10 +137,10 @@ export const curriculumVitae: (Job | Education)[] = [
       'Università degli Studi di Padova',
     ],
     description: `
-      I am mainly working on the background model and liquid argon veto model of
-      the GERDA experiment. I am one of the "simulations and background study
-      task group" leaders. The title of my thesis is "Search for new physics
-      with two-neutrino double-beta decay in GERDA data".
+      Mostly working on the background and liquid argon veto model of the GERDA
+      experiment. "Simulations and background study task group" co-coordinator.
+      My PhD thesis title is "Search for new physics with two-neutrino
+      double-beta decay in GERDA data".
     `,
     urls: [
       'https://github.com/gipert/phd-thesis/releases/download/v1.1/pertoldi-phd-thesis.pdf',
@@ -214,6 +214,17 @@ export const curriculumVitae: (Job | Education)[] = [
 ********/
 
 export const talks: Talk[] = [
+  {
+    title: 'Searching for matter creation with LEGEND',
+    description: `
+      An overview talk about the LEGEND experiment I gave at the KATRIN
+      collaboration meeting in Karlsruhe (DE) as invited speaker.
+    `,
+    date: new Date('2023-03-23'),
+    urls: [
+      'https://gipert.github.io/files/202303-KATRINMeeting.pdf',
+    ],
+  },
   {
     title: 'Searching for matter creation with GERDA and beyond',
     description: `
