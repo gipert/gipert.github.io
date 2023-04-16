@@ -229,13 +229,12 @@ export const talks: Talk[] = [
     title: 'Searching for matter creation with GERDA and beyond',
     description: `
       A talk about the legacy of the GERDA experiment and the future of LEGEND
-      I gave at the Rencontres de Moriond conference (Electroweak Interactions
-      & Unified Theories) in La Thuile (IT).
+      I gave at the International School of Subnuclear Physics in Erice (IT).
     `,
-    date: new Date('2022-03-16'),
+    date: new Date('2022-06-19'),
     urls: [
-      'https://moriond.in2p3.fr/2022/EW/slides/4/1/5_LPertoldi-short-v1.pdf-short.pdf',
-      'https://moriond.in2p3.fr/2022/EW/',
+      'http://www.ccsem.infn.it/issp2022/newtalents/202206-EriceSchool_edited.pdf',
+      'http://www.ccsem.infn.it/issp2022',
     ],
   },
   {
