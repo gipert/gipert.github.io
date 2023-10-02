@@ -233,8 +233,8 @@ export const talks: Talk[] = [
     `,
     date: new Date('2022-06-19'),
     urls: [
-      'http://www.ccsem.infn.it/issp2022/newtalents/202206-EriceSchool_edited.pdf',
-      'http://www.ccsem.infn.it/issp2022',
+      'https://gipert.github.io/files/202206-EriceSchool_edited.pdf',
+      'https://ettoremajoranafoundation.it/scuola/international-school-of-subnuclear-physics',
     ],
   },
   {
