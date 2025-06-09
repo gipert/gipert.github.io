@@ -26,7 +26,6 @@ export const emails: string[] = [
   'gipert@pm.me',
   'pertoldi@pd.infn.it',
   'luigi.pertoldi@tum.de',
-  'luigi.pertoldi@pd.infn.it',
   'luigi.pertoldi@protonmail.com',
   'luigi.pertoldi@pm.com',
 ];
@@ -215,14 +214,26 @@ export const curriculumVitae: (Job | Education)[] = [
 
 export const talks: Talk[] = [
   {
-    title: 'Searching for matter creation with LEGEND',
+    title: 'First results on neutrinoless double beta decay from LEGEND-200',
     description: `
-      An overview talk about the LEGEND experiment I gave at the KATRIN
-      collaboration meeting in Karlsruhe (DE) as invited speaker.
+      I was invited to give a seminar about LEGEND at King's College and UCL in
+      London.
     `,
-    date: new Date('2023-03-23'),
+    date: new Date('2025-03-15'),
     urls: [
-      'https://gipert.github.io/files/202303-KATRINMeeting.pdf',
+      'https://gipert.github.io/files/202500-LEGENDSeminar_edited.pdf',
+    ],
+  },
+  {
+    title: 'The first year of LEGEND-200 physics data in the quest for 0νββ',
+    description: `
+      I was invited to present the first LEGEND-200 0νββ results at the
+      Neutrino 2024 conference in Milano (IT), following an intense year spent
+      preparing for the data unblinding.
+    `,
+    date: new Date('2024-05-18'),
+    urls: [
+      'https://gipert.github.io/files/202406-Neutrino24_edited.pdf',
     ],
   },
   {
@@ -235,19 +246,6 @@ export const talks: Talk[] = [
     urls: [
       'https://gipert.github.io/files/202206-EriceSchool_edited.pdf',
       'https://ettoremajoranafoundation.it/scuola/international-school-of-subnuclear-physics',
-    ],
-  },
-  {
-    title: 'The LEGEND project: Majorana neutrinos beyond the inverted ordering',
-    description: `
-      Seminar on the status of the LEGEND experiment I gave as part of the
-      SFB-1258 colloquy series.
-    `,
-    date: new Date('2021-12-14'),
-    urls: [
-      'https://www.sfb1258.de',
-      'https://gipert.github.io/files/202112-SFB-colloquy_edited.pdf',
-      'https://www.sfb1258.de/previous-events/detail/16-nov-1000-colloquy-on-modern-neutrino-cosmology-and-madmax-1'
     ],
   },
   {
